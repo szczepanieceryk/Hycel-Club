@@ -1,10 +1,12 @@
 
+import React from 'react';
+
 import '../css/style.css';
 
 function App() {
   return (
     <div className="App">
-      Hycel Club!
+      Hycle Club !
     </div>
   );
 }
