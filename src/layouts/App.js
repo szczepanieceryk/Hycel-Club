@@ -1,12 +1,14 @@
 
 import React from 'react';
 
+import LoginPage from '../pages/LoginPage';
+
 import '../css/style.css';
 
 function App() {
   return (
     <div className="App">
-      Hycle Club !
+      <LoginPage />
     </div>
   );
 }

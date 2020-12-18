@@ -2,13 +2,15 @@ import React from 'react';
 
 import Container from 'react-bootstrap/Container';
 
-import LoginForm from './LoginForm';
+import ValidatedLoginForm from '../layouts/ValidatedLoginForm';
+import Navigation from '../layouts/Navigation';
 
 const LoginPage = () => {
     return (
         <Container>
             <div className="login-wrapper">
-                <LoginForm />
+                <Navigation />
+                <ValidatedLoginForm />
             </div>
         </Container>
     );
