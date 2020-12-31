@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Formik from 'formik';
+
 
 
 
 const ValidatedLoginform = () => {
     return (
-        <Formik>
-
-        </Formik>
+        <div className="lginform">
+            Login
+      </div>
     );
 }
 
