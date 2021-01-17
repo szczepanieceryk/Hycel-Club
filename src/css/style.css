@@ -4,4 +4,118 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+@media (min-width: 1280px) {
+  .nav {
+    display: none;
+  }
+}
+
+.paw {
+  display: none;
+}
+
+.login-wrapper .login-header {
+  padding-top: 10px;
+}
+
+.login-wrapper .login-header p {
+  margin: 0;
+}
+
+.login-wrapper .login-form {
+  padding: 20px 0px 0px;
+}
+
+.login-wrapper .login-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-wrapper .login-form input {
+  display: block;
+  padding: 10px 110px 10px 5px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.login-wrapper .login-form .forgot-pass {
+  display: block;
+  text-align: center;
+}
+
+.login-wrapper .login-form .log-in {
+  padding: 15px 100px;
+  margin: 10px 0 5px;
+  border-radius: 8px;
+  background-color: #F47457;
+  border-color: #fff;
+}
+
+.login-wrapper .login-form .new-acc {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.main-image {
+  display: none;
+}
+
+@media (min-width: 360px) {
+  .login-wrapper .login-header {
+    padding-top: 50px;
+  }
+  .login-wrapper .login-form {
+    padding: 40px 0px 0px;
+  }
+  .login-wrapper .login-form label {
+    margin-bottom: 10px;
+  }
+  .login-wrapper .login-form input {
+    padding: 10px 150px 10px 5px;
+  }
+  .login-wrapper .login-form .log-in {
+    padding: 15px 120px;
+    margin: 25px 0 10px;
+  }
+  .login-wrapper .login-form .new-acc {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr, 1fr;
+        grid-template-columns: 1fr, 1fr;
+    padding: 50px 0 130px;
+  }
+  .wrapper .login-wrapper {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .wrapper .login-wrapper .main-image {
+    display: block;
+    height: 100%;
+  }
+  .wrapper .login-form .new-acc,
+  .wrapper .login-form .forgot-pass {
+    text-align: left;
+  }
+  .wrapper .main-image {
+    display: block;
+    -ms-grid-column: 2;
+    grid-column: 2/2;
+  }
+}
+
+@media (min-width: 1280px) {
+  .paw {
+    margin-top: 60px;
+    display: block;
+  }
+}
 /*# sourceMappingURL=style.css.map */
