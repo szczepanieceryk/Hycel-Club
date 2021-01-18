@@ -1,0 +1,16 @@
+.topBar {
+    display: flex;
+    align-content: space-between;
+
+    svg {
+        margin-top: 20px;
+    }
+}
+
+@media(min-width:1024px) {
+    .topBar {
+        svg {
+            margin-top: 40px;
+        }
+    }
+}

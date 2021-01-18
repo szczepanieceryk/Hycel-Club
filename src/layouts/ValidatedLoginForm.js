@@ -57,7 +57,7 @@ const ValidatedLoginform = () => {
                             <input type="text" placeholder="Wpisz login" />
                             <label>HASŁO</label>
                             <input type="password" placeholder="Wpisz hasło" />
-                            <Button className="log-in" type="submit" size="lg">ZALOGUJ</Button>
+                            <a href="/dashboard"><Button className="log-in" type="submit" size="lg">ZALOGUJ</Button></a>
                         </form>
                         <a className="forgot-pass" href="#">Zapomniałem hasła</a>
                         <span className="new-acc">Nie posiadasz konta? <a href="#">ZAŁÓŻ KONTO</a>!</span>

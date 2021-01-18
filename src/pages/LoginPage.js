@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Dashboard from '../pages/Dashboard';
+
 import ValidatedLoginForm from '../layouts/ValidatedLoginForm';
 
 import Navigation from '../layouts/Navigation';
@@ -8,8 +10,9 @@ import Navigation from '../layouts/Navigation';
 const LoginPage = () => {
     return (
         <>
-            <Navigation />
-            <ValidatedLoginForm />
+            <Dashboard />
+            {/* <Navigation />
+            <ValidatedLoginForm /> */}
         </>
     );
 }

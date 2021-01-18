@@ -11,40 +11,36 @@
   }
 }
 
-.paw {
-  display: none;
-}
-
-.login-wrapper .login-header {
+.wrapper .login-wrapper .login-header {
   padding-top: 10px;
 }
 
-.login-wrapper .login-header p {
+.wrapper .login-wrapper .login-header p {
   margin: 0;
 }
 
-.login-wrapper .login-form {
+.wrapper .login-wrapper .login-form {
   padding: 20px 0px 0px;
 }
 
-.login-wrapper .login-form label {
+.wrapper .login-wrapper .login-form label {
   display: block;
   margin-bottom: 5px;
 }
 
-.login-wrapper .login-form input {
+.wrapper .login-wrapper .login-form input {
   display: block;
   padding: 10px 110px 10px 5px;
   margin-bottom: 10px;
   border-radius: 8px;
 }
 
-.login-wrapper .login-form .forgot-pass {
+.wrapper .login-wrapper .login-form .forgot-pass {
   display: block;
   text-align: center;
 }
 
-.login-wrapper .login-form .log-in {
+.wrapper .login-wrapper .login-form .log-in {
   padding: 15px 100px;
   margin: 10px 0 5px;
   border-radius: 8px;
@@ -52,34 +48,34 @@
   border-color: #fff;
 }
 
-.login-wrapper .login-form .new-acc {
+.wrapper .login-wrapper .login-form .new-acc {
   display: block;
   margin-top: 20px;
   text-align: center;
 }
 
-.main-image {
+.wrapper .main-image {
   display: none;
 }
 
 @media (min-width: 360px) {
-  .login-wrapper .login-header {
+  .wrapper .login-wrapper .login-header {
     padding-top: 50px;
   }
-  .login-wrapper .login-form {
+  .wrapper .login-wrapper .login-form {
     padding: 40px 0px 0px;
   }
-  .login-wrapper .login-form label {
+  .wrapper .login-wrapper .login-form label {
     margin-bottom: 10px;
   }
-  .login-wrapper .login-form input {
+  .wrapper .login-wrapper .login-form input {
     padding: 10px 150px 10px 5px;
   }
-  .login-wrapper .login-form .log-in {
+  .wrapper .login-wrapper .login-form .log-in {
     padding: 15px 120px;
     margin: 25px 0 10px;
   }
-  .login-wrapper .login-form .new-acc {
+  .wrapper .login-wrapper .login-form .new-acc {
     margin-top: 40px;
   }
 }
@@ -101,9 +97,9 @@
     display: block;
     height: 100%;
   }
-  .wrapper .login-form .new-acc,
-  .wrapper .login-form .forgot-pass {
-    text-align: left;
+  .wrapper .login-wrapper .login-form .new-acc,
+  .wrapper .login-wrapper .login-form .forgot-pass {
+    text-align-last: left;
   }
   .wrapper .main-image {
     display: block;
@@ -116,6 +112,57 @@
   .paw {
     margin-top: 60px;
     display: block;
+  }
+}
+
+.dashboard-wrapper {
+  display: -ms-grid;
+  display: grid;
+}
+
+.dashboard-wrapper .task {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.addTask .title {
+  text-align: center;
+}
+
+.addTask .form input {
+  padding: 5px 10px;
+}
+
+.addTask .form .add {
+  display: block;
+  padding: 15px 80px;
+  margin: 15px auto;
+  border-radius: 8px;
+  background-color: #F47457;
+  border-color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .addTask .form input {
+    display: block;
+  }
+}
+
+.topBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.topBar svg {
+  margin-top: 20px;
+}
+
+@media (min-width: 1024px) {
+  .topBar svg {
+    margin-top: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */

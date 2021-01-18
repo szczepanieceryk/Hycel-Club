@@ -1,0 +1,33 @@
+.addTask {
+    .title {
+        text-align: center;
+    }
+
+    .form {
+        input {
+            padding: 5px 10px;
+        }
+
+        .add {
+            display: block;
+            padding: 15px 80px;
+            margin: 15px auto;
+            border-radius: 8px;
+            background-color: #F47457;
+            border-color: #fff;
+        }
+    }
+}
+
+@media(min-width:1024px) {
+    .addTask {
+
+        .form {
+
+
+            input {
+                display: block;
+            }
+        }
+    }
+}
