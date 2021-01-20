@@ -116,35 +116,50 @@
 }
 
 .dashboard-wrapper {
-  display: -ms-grid;
-  display: grid;
+  background-color: #f7f7fa;
 }
 
 .dashboard-wrapper .task {
-  padding-top: 40px;
+  padding-top: 20px;
   text-align: center;
-}
-
-.addTask .title {
-  text-align: center;
-}
-
-.addTask .form input {
-  padding: 5px 10px;
-}
-
-.addTask .form .add {
-  display: block;
-  padding: 15px 80px;
-  margin: 15px auto;
-  border-radius: 8px;
-  background-color: #F47457;
-  border-color: #fff;
 }
 
 @media (min-width: 1024px) {
-  .addTask .form input {
-    display: block;
+  .dashboard-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "top top top " "header header header" " main main main" ". tasks .";
+    row-gap: 20px;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+  }
+  .dashboard-wrapper .topBar {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: top;
+  }
+  .dashboard-wrapper .task {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: header;
+    padding-top: 40px;
+  }
+  .dashboard-wrapper .addTask {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: main;
+  }
+  .dashboard-wrapper .taskList {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: tasks;
   }
 }
 
@@ -157,12 +172,97 @@
 }
 
 .topBar svg {
-  margin-top: 20px;
+  margin: 20px 0 10px;
+}
+
+.addTask {
+  background-color: #ddd;
+}
+
+.addTask .title {
+  text-align: center;
+}
+
+.addTask .form input {
+  display: block;
+  padding: 5px 10px;
+}
+
+.addTask .form label {
+  margin: 5px 0 5px;
+}
+
+.addTask .form #important {
+  display: inline;
+  margin: 0 5px 0 10px;
+}
+
+.addTask .form .add {
+  display: block;
+  padding: 15px 80px;
+  margin: 15px auto;
+  border-radius: 8px;
+  background-color: #F47457;
+  border-color: #fff;
 }
 
 @media (min-width: 1024px) {
-  .topBar svg {
-    margin-top: 40px;
+  .addTask .form {
+    margin: 20px 0 0 350px;
+  }
+  .addTask .form .add {
+    margin: 0 50px 30px auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .addTask .form {
+    margin-left: 440px;
+  }
+}
+
+.taskList {
+  background-color: #ddd;
+  text-align: center;
+}
+
+.taskList h6 {
+  padding-top: 20px;
+}
+
+.taskList .task {
+  padding: 20px 0 0;
+}
+
+.taskList .task P {
+  margin: 0 0 10px;
+}
+
+.taskList .active .title {
+  padding-top: 20px;
+}
+
+.task {
+  padding: 20px 0;
+  background-color: #ddd;
+}
+
+.task h6 {
+  margin: 0;
+}
+
+.task svg,
+.task button {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+@media (min-width: 1024px) {
+  .siedbar {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=style.css.map */

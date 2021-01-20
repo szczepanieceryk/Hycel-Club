@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button';
 
 import '../styles/_AddTask.scss';
@@ -14,19 +15,25 @@ class AddTask extends Component {
         checked: false,
         date: this.minDate,
     }
+
+    handleText = (e) => {
+        this.setState({
+            dog: e.target.value
+        })
+    }
+    handleInput = (e) => {
+        this.setState({
+            area: e.target.value
+        })
+    }
     handleCheckbox = (e) => {
         this.setState({
             checked: e.target.checked
         })
     }
-    handelText = (e) => {
+    handleDate = (e) => {
         this.setState({
-            dog: e.target.dog
-        })
-    }
-    handelText = (e) => {
-        this.setState({
-            area: e.target.area
+            date: e.target.value
         })
     }
     handleClick = () => {
@@ -43,6 +50,9 @@ class AddTask extends Component {
             }
         } else {
             alert('Za krótka nazwa. Dodawany pies musi mieć min. 4 znaki')
+            // < Alert className='aler' variant='warning' >
+            //     Za krótka nazwa.Dodawany pies musi mieć min. 4 znaki.
+            // </Alert >
         }
     }
     render() {
@@ -50,12 +60,11 @@ class AddTask extends Component {
         maxDate = maxDate + '-12-31';
         return (
             <div className="addTask">
-                <h6 className="title">MOJE ZLECENIA</h6>
-                <hr />
                 <div className="form">
-                    <input type="text" placeholder="dodaj psa" value={this.state.dog} onChange={this.handelText} />
-                    <input type="text" placeholder="dodaj miejsce" value={this.state.area} onChange={this.handelText} />
-                    <input type="date" value={this.state.date} min={this.minDate} onChange={this.handelDate} />
+                    <input type="text" placeholder="dodaj psa" value={this.state.dog} onChange={this.handleText} />
+                    <input type="text" placeholder="dodaj miejsce" value={this.state.area} onChange={this.handleInput} />
+                    <label htmlFor="date">Do kiedy zrobić</label>
+                    <input type="date" value={this.state.date} min={this.minDate} onChange={this.handleDate} />
                     <br />
                     <input type="checkbox" id="important" value={this.state.checked} onChange={this.handleCheckbox} />
                     <label htmlFor="important">Priorytet</label>

@@ -1,8 +1,42 @@
 .dashboard-wrapper {
-    display: grid;
+    background-color: #f7f7fa;
 
     .task {
-        padding-top: 40px;
+        padding-top: 20px;
         text-align: center;
+    }
+}
+
+@media(min-width:1024px) {
+    .dashboard-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "top top top "
+            "header header header"
+            " main main main"
+            ". tasks ."
+        ;
+        row-gap: 20px;
+        column-gap: 15px;
+
+        .topBar {
+            grid-area: top;
+        }
+
+        .task {
+            grid-area: header;
+            padding-top: 40px
+        }
+
+        .addTask {
+            grid-area: main;
+
+        }
+
+        .taskList {
+            grid-area: tasks;
+        }
     }
 }

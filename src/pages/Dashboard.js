@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import Container from 'react-bootstrap/Container';
-
 import AddTask from '../layouts/AddTask';
+import CatchedList from '../layouts/CatchedList';
+import ProfileBar from '../layouts/ProfileBar';
+import SideBar from '../layouts/SideBar';
 import TaskList from '../layouts/TaskList';
 
-import ProfileBar from '../layouts/ProfileBar';
-
 import '../styles/_Dashboard.scss';
+
 
 class Dashboard extends Component {
     counter = 0;
@@ -36,12 +36,13 @@ class Dashboard extends Component {
             tasks
         })
     }
-    addTask = (dog, area, important) => {
+    addTask = (dog, area, important, date) => {
         const task = {
             id: this.counter,
             dog,
             area,
             important,
+            date,
             active: true,
             finishDate: null
         }
@@ -53,17 +54,22 @@ class Dashboard extends Component {
     }
     render() {
         return (
-            <Container>
+            <>
                 <div className="dashboard-wrapper">
+
                     <ProfileBar />
                     <div className="task">
-                        <h6>WYBÓR ZLECENIA</h6>
+                        <h6>DODAJ ZLECENIE</h6>
                     </div>
-                    <hr />
+                    <br />
                     <AddTask add={this.addTask} />
-                    <TaskList delete={this.deleteTask} change={this.changeTaskStatus} />
+                    <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
+                    <CatchedList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
+                    <SideBar />
                 </div>
-            </Container>
+
+
+            </>
         );
     }
 }

@@ -1,11 +1,25 @@
 .addTask {
+    background-color: #ddd;
+
     .title {
         text-align: center;
     }
 
     .form {
+
+
         input {
+            display: block;
             padding: 5px 10px;
+        }
+
+        label {
+            margin: 5px 0 5px;
+        }
+
+        #important {
+            display: inline;
+            margin: 0 5px 0 10px;
         }
 
         .add {
@@ -21,13 +35,20 @@
 
 @media(min-width:1024px) {
     .addTask {
-
         .form {
+            margin: 20px 0 0 350px;
 
-
-            input {
-                display: block;
+            .add {
+                margin: 0 50px 30px auto;
             }
+        }
+    }
+}
+
+@media(min-width:1280px) {
+    .addTask {
+        .form {
+            margin-left: 440px;
         }
     }
 }

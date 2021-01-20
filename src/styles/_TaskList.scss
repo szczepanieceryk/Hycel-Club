@@ -1,0 +1,22 @@
+.taskList {
+    background-color: #ddd;
+    text-align: center;
+
+    h6 {
+        padding-top: 20px;
+    }
+
+    .task {
+        padding: 20px 0 0;
+
+        P {
+            margin: 0 0 10px;
+        }
+    }
+
+    .active {
+        .title {
+            padding-top: 20px;
+        }
+    }
+}
