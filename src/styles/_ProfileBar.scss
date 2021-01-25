@@ -1,8 +1,46 @@
-.topBar {
+.profileBar {
+    // background-color: #ddd;
     display: flex;
-    align-content: space-between;
+    justify-content: space-between;
 
     svg {
         margin: 20px 0 10px;
+    }
+
+    .user {
+        .userName {
+            vertical-align: middle;
+        }
+
+        svg {
+            margin: 20px 10px 10px;
+        }
+
+        .logOut {
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: .7s;
+        }
+
+        .userName,
+        .logOut {
+            display: none;
+        }
+    }
+}
+
+@media(min-width:1024px) {
+    .profileBar {
+        .user {
+
+            .userName,
+            .logOut {
+                display: inline;
+            }
+
+            .logOut {
+                margin: 20px 20px 10px 20px;
+            }
+        }
     }
 }

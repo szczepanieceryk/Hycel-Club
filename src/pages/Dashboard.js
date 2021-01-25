@@ -5,6 +5,7 @@ import CatchedList from '../layouts/CatchedList';
 import ProfileBar from '../layouts/ProfileBar';
 import SideBar from '../layouts/SideBar';
 import TaskList from '../layouts/TaskList';
+import TopTable from '../layouts/TopTable';
 
 import '../styles/_Dashboard.scss';
 
@@ -56,7 +57,6 @@ class Dashboard extends Component {
         return (
             <>
                 <div className="dashboard-wrapper">
-
                     <ProfileBar />
                     <div className="task">
                         <h6>DODAJ ZLECENIE</h6>
@@ -66,6 +66,7 @@ class Dashboard extends Component {
                     <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
                     <CatchedList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
                     <SideBar />
+                    <TopTable />
                 </div>
 
 

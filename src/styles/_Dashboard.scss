@@ -11,18 +11,23 @@
     .dashboard-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: 5;
         grid-template-areas:
-            "top top top "
-            "header header header"
-            " main main main"
-            ". tasks ."
+            "top top top top"
+            " sidebar sidebar sidebar"
+            " main main main "
+            ". tasks . "
+            "score score score"
         ;
         row-gap: 20px;
-        column-gap: 15px;
+        column-gap: 25px;
 
-        .topBar {
+        .profileBar {
             grid-area: top;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
         }
 
         .task {
@@ -38,5 +43,21 @@
         .taskList {
             grid-area: tasks;
         }
+
+        .topTable {
+            grid-area: score;
+        }
+    }
+}
+
+@media(min-width:1280px) {
+    .dashboard-wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "top top top top"
+            "header header header sidebar"
+            " main main main sidebar"
+            ". tasks . score"
+        ;
     }
 }

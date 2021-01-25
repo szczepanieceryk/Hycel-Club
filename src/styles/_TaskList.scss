@@ -1,6 +1,8 @@
 .taskList {
-    background-color: #ddd;
+    min-height: 230px;
+    margin-bottom: 15px;
     text-align: center;
+    background-color: #ddd;
 
     h6 {
         padding-top: 20px;
@@ -18,5 +20,11 @@
         .title {
             padding-top: 20px;
         }
+    }
+}
+
+@media(min-width:1024px) {
+    .taskList {
+        margin: 0;
     }
 }

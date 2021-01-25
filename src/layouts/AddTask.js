@@ -49,10 +49,11 @@ class AddTask extends Component {
                 })
             }
         } else {
-            alert('Za krótka nazwa. Dodawany pies musi mieć min. 4 znaki')
-            // < Alert className='aler' variant='warning' >
-            //     Za krótka nazwa.Dodawany pies musi mieć min. 4 znaki.
-            // </Alert >
+            // alert('Za krótka nazwa. Dodawany pies musi mieć min. 4 znaki')
+            < Alert className='aler' variant='warning' >
+                Za krótka nazwa.Dodawany pies musi mieć min. 4 znaki.
+            </Alert >
+
         }
     }
     render() {

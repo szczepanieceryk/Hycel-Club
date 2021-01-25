@@ -1,6 +1,22 @@
+.sidebar {
+    background-color: #ddd;
+
+    h6 {
+        padding: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+
 @media(min-width:1024px) {
     .siedbar {
         display: grid;
         grid-template-columns: 1fr;
+        min-width: 300px;
+
+        h6 {
+            padding-top: 40px;
+            margin: 0;
+        }
     }
 }

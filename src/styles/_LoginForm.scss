@@ -1,6 +1,6 @@
-// .paw {
-//     display: none;
-// }
+.pawLogin {
+    margin: 20px 0 10px;
+}
 
 .wrapper {
 
@@ -62,7 +62,7 @@
         .login-wrapper {
 
             .login-header {
-                padding-top: 50px;
+                padding-top: 30px;
             }
 
             .login-form {
@@ -94,16 +94,20 @@
     .wrapper {
         display: grid;
         grid-template-columns: 1fr, 1fr;
+        grid-template-areas:
+            "login image "
+        ;
         padding: 50px 0 130px;
 
-        .login-wrapper {
-            grid-column: 1/2;
+        .main-image {
+            display: block;
+            height: 100%;
+            grid-area: image;
+        }
 
+        .login-wrapper {
+            grid-area: login;
             // text-align: center;
-            .main-image {
-                display: block;
-                height: 100%;
-            }
 
             .login-form {
 
@@ -114,11 +118,6 @@
             }
         }
 
-
-        .main-image {
-            display: block;
-            grid-column: 2/2;
-        }
     }
 }
 

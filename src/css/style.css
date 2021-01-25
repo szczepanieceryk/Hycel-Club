@@ -11,6 +11,10 @@
   }
 }
 
+.pawLogin {
+  margin: 20px 0 10px;
+}
+
 .wrapper .login-wrapper .login-header {
   padding-top: 10px;
 }
@@ -60,7 +64,7 @@
 
 @media (min-width: 360px) {
   .wrapper .login-wrapper .login-header {
-    padding-top: 50px;
+    padding-top: 30px;
   }
   .wrapper .login-wrapper .login-form {
     padding: 40px 0px 0px;
@@ -86,25 +90,24 @@
     display: grid;
     -ms-grid-columns: 1fr, 1fr;
         grid-template-columns: 1fr, 1fr;
+        grid-template-areas: "login image ";
     padding: 50px 0 130px;
   }
-  .wrapper .login-wrapper {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-  }
-  .wrapper .login-wrapper .main-image {
+  .wrapper .main-image {
     display: block;
     height: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: image;
+  }
+  .wrapper .login-wrapper {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: login;
   }
   .wrapper .login-wrapper .login-form .new-acc,
   .wrapper .login-wrapper .login-form .forgot-pass {
     text-align-last: left;
-  }
-  .wrapper .main-image {
-    display: block;
-    -ms-grid-column: 2;
-    grid-column: 2/2;
   }
 }
 
@@ -130,23 +133,26 @@
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-        grid-template-areas: "top top top " "header header header" " main main main" ". tasks .";
+    -ms-grid-rows: 5;
+        grid-template-rows: 5;
+        grid-template-areas: "top top top top" " sidebar sidebar sidebar" " main main main " ". tasks . " "score score score";
     row-gap: 20px;
-    -webkit-column-gap: 15px;
-            column-gap: 15px;
+    -webkit-column-gap: 25px;
+            column-gap: 25px;
   }
-  .dashboard-wrapper .topBar {
+  .dashboard-wrapper .profileBar {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
+    -ms-grid-column-span: 4;
     grid-area: top;
   }
-  .dashboard-wrapper .task {
+  .dashboard-wrapper .sidebar {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
+    grid-area: sidebar;
+  }
+  .dashboard-wrapper .task {
     grid-area: header;
     padding-top: 40px;
   }
@@ -161,21 +167,68 @@
     -ms-grid-column: 2;
     grid-area: tasks;
   }
+  .dashboard-wrapper .topTable {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: score;
+  }
 }
 
-.topBar {
+@media (min-width: 1280px) {
+  .dashboard-wrapper {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "top top top top" "header header header sidebar" " main main main sidebar" ". tasks . score";
+  }
+}
+
+.profileBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.topBar svg {
+.profileBar svg {
   margin: 20px 0 10px;
 }
 
+.profileBar .user .userName {
+  vertical-align: middle;
+}
+
+.profileBar .user svg {
+  margin: 20px 10px 10px;
+}
+
+.profileBar .user .logOut {
+  padding: 10px 20px;
+  border-radius: 8px;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.profileBar .user .userName,
+.profileBar .user .logOut {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .profileBar .user .userName,
+  .profileBar .user .logOut {
+    display: inline;
+  }
+  .profileBar .user .logOut {
+    margin: 20px 20px 10px 20px;
+  }
+}
+
 .addTask {
+  min-height: 300px;
+  margin-bottom: 15px;
   background-color: #ddd;
 }
 
@@ -183,9 +236,14 @@
   text-align: center;
 }
 
+.addTask .form {
+  padding: 20px 0px;
+}
+
 .addTask .form input {
   display: block;
   padding: 5px 10px;
+  margin: 0 auto;
 }
 
 .addTask .form label {
@@ -207,8 +265,8 @@
 }
 
 @media (min-width: 1024px) {
-  .addTask .form {
-    margin: 20px 0 0 350px;
+  .addTask {
+    margin: 0;
   }
   .addTask .form .add {
     margin: 0 50px 30px auto;
@@ -217,13 +275,15 @@
 
 @media (min-width: 1280px) {
   .addTask .form {
-    margin-left: 440px;
+    margin: 20px 0 0 325px;
   }
 }
 
 .taskList {
-  background-color: #ddd;
+  min-height: 230px;
+  margin-bottom: 15px;
   text-align: center;
+  background-color: #ddd;
 }
 
 .taskList h6 {
@@ -242,6 +302,12 @@
   padding-top: 20px;
 }
 
+@media (min-width: 1024px) {
+  .taskList {
+    margin: 0;
+  }
+}
+
 .task {
   padding: 20px 0;
   background-color: #ddd;
@@ -257,12 +323,27 @@
   margin-left: 5px;
 }
 
+.sidebar {
+  background-color: #ddd;
+}
+
+.sidebar h6 {
+  padding: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
 @media (min-width: 1024px) {
   .siedbar {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    min-width: 300px;
+  }
+  .siedbar h6 {
+    padding-top: 40px;
+    margin: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
