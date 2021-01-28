@@ -4,7 +4,7 @@ import AddTask from '../layouts/AddTask';
 import CatchedList from '../layouts/CatchedList';
 import ProfileBar from '../layouts/ProfileBar';
 import ProfileCard from '../layouts/ProfileCard';
-import SideBar from '../layouts/SideBar';
+import ActivityCard from '../layouts/ActivityCard';
 import TaskList from '../layouts/TaskList';
 import TopTable from '../layouts/TopTable';
 
@@ -69,7 +69,7 @@ class Dashboard extends Component {
                     <AddTask add={this.addTask} />
                     <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
                     <CatchedList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
-                    <SideBar tasks={this.state.tasks} />
+                    <ActivityCard tasks={this.state.tasks} />
                     <TopTable />
                     <ProfileCard userName={this.userName} />
                 </div>

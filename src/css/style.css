@@ -169,7 +169,7 @@
     -ms-grid-column-span: 4;
     grid-area: top;
   }
-  .dashboard-wrapper .sidebar {
+  .dashboard-wrapper .activity-wrapper {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -320,7 +320,7 @@
 }
 
 .taskList .task P {
-  margin: 0 0 10px;
+  margin: 0 5px 10px;
 }
 
 .taskList .active .title {
@@ -335,17 +335,12 @@
 
 @media (min-width: 1280px) {
   .taskList {
-    min-width: 300px;
+    min-width: 450px;
   }
 }
 
 .task {
   background-color: #ddd;
-}
-
-.task .dogo {
-  margin-top: 15px;
-  height: 10vh;
 }
 
 .task h6 {
@@ -366,13 +361,18 @@
   list-style: none;
 }
 
-.sidebar {
+.activity-wrapper {
   background-color: #ddd;
 }
 
-.sidebar h6 {
+.activity-wrapper p {
+  display: inline-block;
+  padding: 0 5px 0 15px;
+}
+
+.activity-wrapper .title {
   padding: 20px;
-  margin-bottom: 15px;
+  margin: 0;
   text-align: center;
 }
 
@@ -434,6 +434,7 @@
 
 @media (min-width: 1024px) {
   .profile-card {
+    min-width: 220px;
     display: block;
   }
 }
@@ -443,6 +444,25 @@
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+}
+
+.list-dog p {
+  text-align: center;
+}
+
+.list-dog svg {
+  cursor: pointer;
+}
+
+.list-dog .dogo {
+  margin-top: 15px;
+  height: 10vh;
+}
+
+@media (min-width: 1024px) {
+  .list-dog .dogo {
+    height: 8vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

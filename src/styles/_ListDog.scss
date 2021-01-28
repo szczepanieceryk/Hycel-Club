@@ -1,0 +1,22 @@
+.list-dog {
+    p {
+        text-align: center;
+    }
+
+    svg {
+        cursor: pointer;
+    }
+
+    .dogo {
+        margin-top: 15px;
+        height: 10vh;
+    }
+}
+
+@media(min-width:1024px) {
+    .list-dog {
+        .dogo {
+            height: 8vh;
+        }
+    }
+}

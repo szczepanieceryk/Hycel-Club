@@ -1,11 +1,17 @@
 .list-wrapper {
     background-color: #ddd;
+    // background-color: #f7f7fa;
 
-
-    h6 {
+    .title {
         padding: 20px;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         text-align: center;
+    }
+
+    .info {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
     .task {
@@ -16,6 +22,7 @@
 @media(min-width:1024px) {
     .list-wrapper {
         min-height: 250px;
+        min-width: 250px;
 
         h6 {
             margin: 0;

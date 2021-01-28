@@ -1,8 +1,11 @@
 import React from 'react';
 
-import '../styles/_ProfileBar.scss';
-
 import Button from 'react-bootstrap/Button';
+import styled from 'styled-components';
+
+import Skeleton from './Skeleton';
+
+import '../styles/_ProfileBar.scss';
 
 const paw = <svg className="paw" width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="30" cy="30" r="30" fill="#F47457" />
@@ -25,12 +28,17 @@ const profileIcon = <svg className="profile" xmlns="http://www.w3.org/2000/svg" 
     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
 </svg>
 
+const logo = styled.div`
+width:40px;
+height:40px;
+`
+
 const ProbileBar = () => {
 
     return (
         <div className="profileBar">
             <div className="logo">
-                {paw}
+                <Skeleton /> {paw}
             </div>
             <div className="user">
                 {profileIcon}
