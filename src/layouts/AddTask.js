@@ -4,6 +4,7 @@ import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button';
 
 import '../styles/_AddTask.scss';
+import warning from 'warning';
 
 class AddTask extends Component {
 
@@ -49,11 +50,7 @@ class AddTask extends Component {
                 })
             }
         } else {
-            // alert('Za krótka nazwa. Dodawany pies musi mieć min. 4 znaki')
-            < Alert className='aler' variant='warning' >
-                Za krótka nazwa.Dodawany pies musi mieć min. 4 znaki.
-            </Alert >
-
+            alert('Za krótka nazwa. Dodawany pies musi mieć min. 4 znaki')
         }
     }
     render() {

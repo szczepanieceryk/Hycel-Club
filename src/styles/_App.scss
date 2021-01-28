@@ -10,3 +10,21 @@
 
     }
 }
+
+@media(min-width:1400px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+@media(min-width:1600px) {
+    .container {
+        max-width: 1500px;
+    }
+}
+
+@media(min-width:1900px) {
+    .container {
+        max-width: 1800px;
+    }
+}

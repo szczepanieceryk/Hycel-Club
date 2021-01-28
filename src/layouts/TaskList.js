@@ -16,7 +16,7 @@ const TaskList = (props) => {
     // if (active.length >= 2) {
     //     active.sort((a, b) => {
     //         a = a.text.toLowerCase();
-    //         b = b.text.toLowerCase();
+
 
     //         if (a < b) return -1;
     //         if (a > b) return 1;
@@ -31,7 +31,7 @@ const TaskList = (props) => {
     return (
         <div className="taskList">
             <h6>MOJE ZLECENIA</h6>
-            <Tabs defaultActiveKey="home" transition={false} id="noanim-tab-example">
+            <Tabs className="tabs" defaultActiveKey="home" transition={false} id="noanim-tab-example">
                 <Tab eventKey="home" title="Aktywne">
                     <div className="active">
                         <h6 className="title">ZLECENIA DO WYKONANIA</h6>

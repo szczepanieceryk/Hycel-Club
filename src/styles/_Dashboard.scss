@@ -2,8 +2,9 @@
     background-color: #f7f7fa;
 
     .task {
-        padding-top: 20px;
+        padding: 20px 0 20px;
         text-align: center;
+
     }
 }
 
@@ -16,7 +17,7 @@
             "top top top top"
             " sidebar sidebar sidebar"
             " main main main "
-            ". tasks . "
+            " tasks tasks . "
             "score score score"
         ;
         row-gap: 20px;
@@ -37,7 +38,6 @@
 
         .addTask {
             grid-area: main;
-
         }
 
         .taskList {
@@ -47,15 +47,18 @@
         .topTable {
             grid-area: score;
         }
+
+        .profile-card {
+            grid-area: profile;
+        }
     }
 }
 
 @media(min-width:1280px) {
     .dashboard-wrapper {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "top top top top"
-            "header header header sidebar"
+        grid-template-areas: "top top top top"
+            "header header header profile"
             " main main main sidebar"
             ". tasks . score"
         ;

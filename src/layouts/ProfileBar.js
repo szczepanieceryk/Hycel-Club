@@ -27,9 +27,6 @@ const profileIcon = <svg className="profile" xmlns="http://www.w3.org/2000/svg" 
 
 const ProbileBar = () => {
 
-    const userName = 'Admin';
-    const userName2 = 'Mathew Hawk';
-
     return (
         <div className="profileBar">
             <div className="logo">
@@ -37,8 +34,7 @@ const ProbileBar = () => {
             </div>
             <div className="user">
                 {profileIcon}
-                <span className="userName"><strong>{userName}</strong></span>
-                <Button className="logOut" variant="outline-dark">Wyloguj</Button>
+                <Button className="log-out" variant="outline-dark">Wyloguj</Button>
             </div>
         </div>
     );

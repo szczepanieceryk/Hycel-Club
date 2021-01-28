@@ -1,33 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import Table from 'react-bootstrap/Table'
 
+const apiURL = 'https://jsonplaceholder.typicode.com/users/';
+
 const TopTable = () => {
 
-    const apiURL = 'https://jsonplaceholder.typicode.com/users/';
+    const getUser = async (id) => {
+        try {
+            const response = await fetch(`${apiURL}${id}`);
+            const data = await response.json();
+            return data;
 
-    // const getUser = async (id) => {
-    //     try {
-    //         const response = await fetch(`${apiURL}${id}`)
-    //         const data = await response.json();
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
-    //         return data;
-    //     } catch (err) {
-    //         console.log(err)
-    //     }
-    // };
+    getUser(1).then((data) => {
+        const user = data;
+        const { username } = user;
 
-    // getUser(1).then((data) => {
-    //     const [user] = data;
-    //     const { username } = user;
+        const userName = username;
 
-    //     const userBoard = username;
-
-    //     console.log(userBoard);
-    // })
-
-
-
+        console.log(userName);
+    });
 
     return (
 
@@ -53,18 +50,22 @@ const TopTable = () => {
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Kamcio</td>
+                        <td></td>
                         <td>70</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Jacob</td>
+                        <td>Boot4</td>
                         <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Boot1</td>
+                        <td>30</td>
                     </tr>
                 </tbody>
             </Table>
         </div>
     );
 }
-
 export default TopTable;

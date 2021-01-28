@@ -1,14 +1,26 @@
 .task {
-    padding: 20px 0;
     background-color: #ddd;
+
+    .dogo {
+        margin-top: 15px;
+        height: 10vh;
+    }
 
     h6 {
         margin: 0;
+    }
+
+    p {
+        padding-bottom: 5px;
     }
 
     svg,
     button {
         cursor: pointer;
         margin-left: 5px;
+    }
+
+    li {
+        list-style: none;
     }
 }

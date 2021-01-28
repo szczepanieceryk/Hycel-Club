@@ -53,7 +53,9 @@
     }
 
     .main-image {
-        display: none;
+        .logo {
+            display: none;
+        }
     }
 }
 
@@ -100,24 +102,23 @@
         padding: 50px 0 130px;
 
         .main-image {
-            display: block;
-            height: 100%;
-            grid-area: image;
-        }
-
-        .login-wrapper {
-            grid-area: login;
-            // text-align: center;
-
-            .login-form {
-
-                .new-acc,
-                .forgot-pass {
-                    text-align-last: left;
-                }
+            .logo {
+                display: block;
+                height: 60vh;
+                grid-area: image;
             }
         }
 
+
+
+        .login-wrapper {
+            grid-area: login;
+
+            // text-align: center;
+            .login-header {
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -125,5 +126,22 @@
     .paw {
         margin-top: 60px;
         display: block;
+    }
+
+    .wrapper {
+
+        .login-wrapper {
+
+            .login-header {
+                margin-right: 20px;
+            }
+        }
+
+        .main-image {
+            .logo {
+                margin-left: 70px;
+
+            }
+        }
     }
 }

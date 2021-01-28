@@ -65,7 +65,7 @@ const ValidatedLoginform = () => {
                     </div>
                 </div>
                 <div className="main-image">
-                    {hycelImg}
+                    <img className="logo" src={hycelImg} alt="HycelClub logo" />
                 </div>
             </div>
         </>

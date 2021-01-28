@@ -8,22 +8,15 @@
     }
 
     .user {
-        .userName {
-            vertical-align: middle;
-        }
 
         svg {
             margin: 20px 10px 10px;
         }
 
-        .logOut {
+        .log-out {
             padding: 10px 20px;
             border-radius: 8px;
             transition: .7s;
-        }
-
-        .userName,
-        .logOut {
             display: none;
         }
     }
@@ -32,13 +25,12 @@
 @media(min-width:1024px) {
     .profileBar {
         .user {
-
-            .userName,
-            .logOut {
-                display: inline;
+            svg {
+                display: none;
             }
 
-            .logOut {
+            .log-out {
+                display: inline;
                 margin: 20px 20px 10px 20px;
             }
         }

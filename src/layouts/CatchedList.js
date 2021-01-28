@@ -7,7 +7,6 @@ import '../styles/_CatchedList.scss';
 const CatchedList = (props) => {
     const done = props.tasks.filter(task => !task.active);
     const doneTasks = done.map(task => <Task key={task.id} task={task} delete={props.delete} change={props.change} />)
-
     return (
         <div className="list-wrapper">
             <h6>LISTA DODANYCH PSÓW</h6>
