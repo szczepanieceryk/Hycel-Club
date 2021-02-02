@@ -56,6 +56,11 @@
         .logo {
             display: none;
         }
+
+        .license {
+            display: none;
+            text-align: center;
+        }
     }
 }
 
@@ -92,8 +97,34 @@
     }
 }
 
+@media(min-width:640px) {
+    .wrapper {
+        margin-top: 100px;
+        text-align: center;
+
+        .login-wrapper {
+            .login-form {
+
+                form {
+                    label {
+                        text-align: left;
+                        margin-left: 185px;
+                    }
+
+                    input {
+
+                        margin: 0 auto 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media(min-width:1024px) {
     .wrapper {
+        text-align: left;
+        margin: 0;
         display: grid;
         grid-template-columns: 1fr, 1fr;
         grid-template-areas:
@@ -104,19 +135,31 @@
         .main-image {
             .logo {
                 display: block;
-                height: 60vh;
+                height: 30vh;
+                margin: 70px 0 30px 25px;
                 grid-area: image;
             }
+
+            .license {
+                display: block;
+                text-align: center;
+            }
         }
-
-
 
         .login-wrapper {
             grid-area: login;
 
-            // text-align: center;
             .login-header {
                 text-align: center;
+            }
+
+            .login-form {
+                form {
+                    label {
+
+                        margin-left: 0;
+                    }
+                }
             }
         }
     }
@@ -139,7 +182,8 @@
 
         .main-image {
             .logo {
-                margin-left: 70px;
+                height: 60vh;
+                margin: 0px 0 20px 70px;
 
             }
         }

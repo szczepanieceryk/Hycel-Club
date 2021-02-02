@@ -11,9 +11,8 @@ const CatchedList = (props) => {
         <div className="list-wrapper">
             <h6 className="title">LISTA DODANYCH PSÓW</h6>
             <div className="list">
-                {/* {doneTasks.length > 0 ? doneTasks : null} */}
-                {doneTasks.length > 5 && <span className="info">(Wyświetlonych jest jedynie 5 ostatnio dodanych psów)</span>}
-                {doneTasks.slice(0, 5)}
+                {doneTasks.length > 5 && <span className="info">(Wyświetlane są t jedynie 3 ostatnio dodane psy)</span>}
+                {doneTasks.slice(0, 3)}
             </div>
         </div>
     );

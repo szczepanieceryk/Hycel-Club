@@ -5,6 +5,14 @@
           box-sizing: border-box;
 }
 
+* h6 {
+  text-align: center;
+}
+
+* div {
+  border-radius: 8px;
+}
+
 @media (min-width: 1280px) {
   .nav {
     display: none;
@@ -80,6 +88,11 @@
   display: none;
 }
 
+.wrapper .main-image .license {
+  display: none;
+  text-align: center;
+}
+
 @media (min-width: 360px) {
   .wrapper .login-wrapper .login-header {
     padding-top: 30px;
@@ -102,8 +115,24 @@
   }
 }
 
+@media (min-width: 640px) {
+  .wrapper {
+    margin-top: 100px;
+    text-align: center;
+  }
+  .wrapper .login-wrapper .login-form form label {
+    text-align: left;
+    margin-left: 185px;
+  }
+  .wrapper .login-wrapper .login-form form input {
+    margin: 0 auto 10px;
+  }
+}
+
 @media (min-width: 1024px) {
   .wrapper {
+    text-align: left;
+    margin: 0;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr, 1fr;
@@ -113,10 +142,15 @@
   }
   .wrapper .main-image .logo {
     display: block;
-    height: 60vh;
+    height: 30vh;
+    margin: 70px 0 30px 25px;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: image;
+  }
+  .wrapper .main-image .license {
+    display: block;
+    text-align: center;
   }
   .wrapper .login-wrapper {
     -ms-grid-row: 1;
@@ -125,6 +159,9 @@
   }
   .wrapper .login-wrapper .login-header {
     text-align: center;
+  }
+  .wrapper .login-wrapper .login-form form label {
+    margin-left: 0;
   }
 }
 
@@ -137,7 +174,8 @@
     margin-right: 20px;
   }
   .wrapper .main-image .logo {
-    margin-left: 70px;
+    height: 60vh;
+    margin: 0px 0 20px 70px;
   }
 }
 
@@ -265,13 +303,15 @@
   margin: 0 auto;
 }
 
-.addTask .form label {
-  margin: 5px 0 5px;
+.addTask .form .important {
+  display: block;
+  text-align: center;
 }
 
-.addTask .form #important {
-  display: inline;
-  margin: 0 5px 0 10px;
+.addTask .form #date {
+  display: block;
+  text-align: center;
+  margin: 5px 0 5px;
 }
 
 .addTask .form .add {
@@ -287,6 +327,9 @@
   .addTask {
     margin: 0;
   }
+  .addTask .form #date {
+    margin: 10px 0 10px;
+  }
   .addTask .form .add {
     margin: 0 50px 30px auto;
   }
@@ -294,7 +337,7 @@
 
 @media (min-width: 1280px) {
   .addTask .form {
-    margin: 20px 0 0 325px;
+    padding: 50px 0 10px;
   }
 }
 
@@ -363,6 +406,7 @@
 
 .activity-wrapper {
   background-color: #ddd;
+  margin-bottom: 15px;
 }
 
 .activity-wrapper p {
@@ -376,9 +420,40 @@
   text-align: center;
 }
 
+.activity-wrapper .progress {
+  margin: 0 auto;
+  width: 150px;
+}
+
+.activity-wrapper .bar {
+  min-width: 72.5px;
+}
+
+.activity-wrapper .sucess {
+  padding: 15px 0 10px;
+}
+
+@media (min-width: 1280px) {
+  .activity-wrapper {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .activity-wrapper .activity span {
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .activity-wrapper .activity span {
+    padding-right: 190px;
+  }
+}
+
 .profile-card {
-  background-color: #ddd;
   display: none;
+  background-color: #ddd;
 }
 
 .profile-card svg {

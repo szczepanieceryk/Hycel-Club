@@ -10,11 +10,16 @@
 
 @media(min-width:1024px) {
     .dashboard-wrapper {
+
+        // .task {
+        //     height: 100px;
+        //     margin-top: 15px;
+        // }
+
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 5;
-        grid-template-areas:
-            "top top top top"
+        grid-template-areas: "top top top top"
             " sidebar sidebar sidebar"
             " main main main "
             " tasks tasks . "

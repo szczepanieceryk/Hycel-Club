@@ -1,5 +1,6 @@
 .activity-wrapper {
     background-color: #ddd;
+    margin-bottom: 15px;
 
     p {
         display: inline-block;
@@ -10,5 +11,44 @@
         padding: 20px;
         margin: 0;
         text-align: center;
+    }
+
+    .progress {
+        margin: 0 auto;
+        width: 150px;
+    }
+
+    .bar {
+        min-width: 72.5px;
+    }
+
+    .sucess {
+        padding: 15px 0 10px;
+    }
+}
+
+@media(min-width:1280px) {
+    .activity-wrapper {
+        margin: 0;
+    }
+}
+
+@media(min-width:1400px) {
+    .activity-wrapper {
+        .activity {
+            span {
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+@media(min-width:1600px) {
+    .activity-wrapper {
+        .activity {
+            span {
+                padding-right: 190px;
+            }
+        }
     }
 }

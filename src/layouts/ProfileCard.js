@@ -1,13 +1,18 @@
 import React from 'react';
 
+import Task from './Task';
+
 import '../styles/_ProfileCard.scss';
 
 const ProfileCard = (props) => {
 
+    const done = props.tasks.filter(task => !task.active);
+    const doneTasks = done.map(task => <Task key={task.id} task={task} delete={props.delete} change={props.change} />)
+
     const userName = props.userName;
     const folowing = 30;
     const folowers = 45;
-    const overalStats = 10;
+    const basicScore = 10;
 
     const profileIcon = <svg className="profile" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -37,7 +42,7 @@ const ProfileCard = (props) => {
                     <li>
                         <a href="">
                             <span className="title">Zł. psy</span>
-                            <b className="stats">{overalStats}</b>
+                            <b className="stats">{doneTasks.length === 0 ? basicScore : doneTasks.length + basicScore}</b>
                         </a>
                     </li>
                 </ul>

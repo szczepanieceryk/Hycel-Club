@@ -1,10 +1,17 @@
 import React from 'react';
 
+import Task from './Task';
+
 import Table from 'react-bootstrap/Table'
 
 const apiURL = 'https://jsonplaceholder.typicode.com/users/';
 
-const TopTable = () => {
+const TopTable = (props) => {
+
+    const basicScore = 100;
+
+    const done = props.tasks.filter(task => !task.active);
+    const doneTasks = done.map(task => <Task key={task.id} task={task} delete={props.delete} change={props.change} />)
 
     const getUser = async (id) => {
         try {
@@ -13,22 +20,20 @@ const TopTable = () => {
             return data;
 
         } catch (err) {
-            console.log(err);
+            console.log(`Error: ${err}`);
         }
     };
 
-    getUser(1).then((data) => {
+    getUser(3).then((data) => {
         const user = data;
         const { username } = user;
-
         const userName = username;
 
-        console.log(userName);
+        // console.log(userName);
     });
-
     return (
-
         <div className="topTable">
+            <h6 className="title"><strong>Top z tyg.</strong></h6>
             <Table striped bordered hover size="sm">
                 <thead>
                     <tr>
@@ -41,27 +46,27 @@ const TopTable = () => {
                     <tr>
                         <td>1</td>
                         <td>RoseRick</td>
-                        <td>100</td>
+                        <td>{doneTasks.length === 0 ? basicScore : doneTasks.length * 10 + basicScore}</td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>MattJ</td>
-                        <td>80</td>
+                        <td>{doneTasks.length === 0 ? 70 : doneTasks.length * 10 + 70}</td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td></td>
-                        <td>70</td>
+                        <td>50</td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Boot4</td>
-                        <td>40</td>
+                        <td>30</td>
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>Boot1</td>
-                        <td>30</td>
+                        <td>10</td>
                     </tr>
                 </tbody>
             </Table>

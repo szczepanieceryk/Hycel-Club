@@ -2,6 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    h6 {
+        text-align: center;
+
+    }
+
+    div {
+        border-radius: 8px;
+    }
 }
 
 @media(min-width:1280px) {

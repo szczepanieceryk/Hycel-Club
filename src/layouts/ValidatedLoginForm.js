@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Button from 'react-bootstrap/Button';
 
@@ -40,36 +40,45 @@ const Logo =
         </defs>
     </svg>
 
-const ValidatedLoginform = () => {
+class ValidatedLoginform extends Component {
 
-    return (
-        <>
-            {paw}
-            <div className="wrapper">
-                <div className="login-wrapper">
-                    <div className="login-header">
-                        {Logo}
-                        <p>Witaj w klubie dobrej zabawy.</p>
-                        <p>Łapiesz kundle i zgarniasz hajs!</p>
+    state =
+        {
+            login: 'admin',
+            pass: 'admin1234',
+        }
+
+    render() {
+        return (
+            <>
+                {paw}
+                <div className="wrapper">
+                    <div className="login-wrapper">
+                        <div className="login-header">
+                            {Logo}
+                            <p>Witaj w klubie dobrej zabawy.</p>
+                            {/* <p>Łapiesz kundle i zgarniasz hajs!</p> */}
+                            <p>Zbieraj punkty i rywalizuj ze znajomymi!</p>
+                        </div>
+                        <div className="login-form">
+                            <form>
+                                <label>LOGIN</label>
+                                <input type="text" placeholder="Wpisz login" value={this.state.login} />
+                                <label>HASŁO</label>
+                                <input type="password" placeholder="Wpisz hasło" value={this.state.passs} />
+                                <a href="/dashboard"><Button className="log-in" type="submit" size="lg">ZALOGUJ</Button></a>
+                            </form>
+                            <a className="forgot-pass" href="#">Zapomniałem hasła</a>
+                            <span className="new-acc">Nie posiadasz konta? <a href="#">ZAŁÓŻ KONTO</a>!</span>
+                        </div>
                     </div>
-                    <div className="login-form">
-                        <form>
-                            <label>LOGIN</label>
-                            <input type="text" placeholder="Wpisz login" />
-                            <label>HASŁO</label>
-                            <input type="password" placeholder="Wpisz hasło" />
-                            <a href="/dashboard"><Button className="log-in" type="submit" size="lg">ZALOGUJ</Button></a>
-                        </form>
-                        <a className="forgot-pass" href="#">Zapomniałem hasła</a>
-                        <span className="new-acc">Nie posiadasz konta? <a href="#">ZAŁÓŻ KONTO</a>!</span>
+                    <div className="main-image">
+                        <img className="logo" src={hycelImg} alt="HycelClub logo" />
+                        <a className="license" href="http://www.freepik.com">Designed by pch.vector / Freepik</a>
                     </div>
                 </div>
-                <div className="main-image">
-                    <img className="logo" src={hycelImg} alt="HycelClub logo" />
-                </div>
-            </div>
-        </>
-    );
+            </>
+        );
+    }
 }
-
 export default ValidatedLoginform;

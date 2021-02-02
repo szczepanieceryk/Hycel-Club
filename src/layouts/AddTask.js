@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 
-import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button';
-
+import Notification from './Notification';
 import '../styles/_AddTask.scss';
-import warning from 'warning';
 
 class AddTask extends Component {
 
@@ -61,11 +59,11 @@ class AddTask extends Component {
                 <div className="form">
                     <input type="text" placeholder="dodaj psa" value={this.state.dog} onChange={this.handleText} />
                     <input type="text" placeholder="dodaj miejsce" value={this.state.area} onChange={this.handleInput} />
-                    <label htmlFor="date">Do kiedy zrobić</label>
-                    <input type="date" value={this.state.date} min={this.minDate} onChange={this.handleDate} />
+                    <label htmlFor="date" id="date">Do kiedy zrobić</label>
+                    <input type="date" value={this.state.date} min={this.minDate} max={maxDate} onChange={this.handleDate} />
                     <br />
                     <input type="checkbox" id="important" value={this.state.checked} onChange={this.handleCheckbox} />
-                    <label htmlFor="important">Priorytet</label>
+                    <label className="important" htmlFor="important">Priorytet</label>
                     <Button className="add" onClick={this.handleClick}>DODAJ</Button>
                 </div>
             </div>

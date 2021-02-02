@@ -7,6 +7,7 @@ import ProfileCard from '../layouts/ProfileCard';
 import ActivityCard from '../layouts/ActivityCard';
 import TaskList from '../layouts/TaskList';
 import TopTable from '../layouts/TopTable';
+import Toast from '../layouts/Notification';
 
 import '../styles/_Dashboard.scss';
 
@@ -60,6 +61,7 @@ class Dashboard extends Component {
     render() {
         return (
             <>
+                <Toast />
                 <div className="dashboard-wrapper">
                     <ProfileBar />
                     <div className="task">
@@ -70,8 +72,8 @@ class Dashboard extends Component {
                     <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
                     <CatchedList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
                     <ActivityCard tasks={this.state.tasks} />
-                    <TopTable />
-                    <ProfileCard userName={this.userName} />
+                    <TopTable tasks={this.state.tasks} />
+                    <ProfileCard tasks={this.state.tasks} userName={this.userName} />
                 </div>
 
 

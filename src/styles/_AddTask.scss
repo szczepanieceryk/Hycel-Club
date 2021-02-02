@@ -16,17 +16,24 @@
             margin: 0 auto;
         }
 
-        label {
-            // display: block;
-            margin: 5px 0 5px;
-            // margin: 10px 0 5px 50px;
-            // text-align: center;
+        .important {
+            display: block;
+            text-align: center;
         }
 
-        #important {
-            display: inline;
-            margin: 0 5px 0 10px;
+        #date {
+
+            display: block;
+            text-align: center;
+            margin: 5px 0 5px;
+
+
         }
+
+        // #important {
+        //     display: inline;
+        //     margin: 0 5px 0 10px;
+        // }
 
         .add {
             display: block;
@@ -43,8 +50,11 @@
     .addTask {
         margin: 0;
 
+
         .form {
-            // margin: 20px 0 0 350px;
+            #date {
+                margin: 10px 0 10px;
+            }
 
             .add {
                 margin: 0 50px 30px auto;
@@ -56,7 +66,9 @@
 @media(min-width:1280px) {
     .addTask {
         .form {
-            margin: 20px 0 0 325px;
+            padding: 50px 0 10px;
+            // margin: 20px 0 0 325px;
+            // margin-top: 50px;
         }
     }
 }
