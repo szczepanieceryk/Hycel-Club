@@ -8,7 +8,6 @@ import Navigation from '../layouts/Navigation';
 const LoginPage = () => {
     return (
         <>
-
             {/* <Navigation /> */}
             <ValidatedLoginForm />
         </>

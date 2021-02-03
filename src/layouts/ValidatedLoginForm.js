@@ -4,6 +4,9 @@ import Button from 'react-bootstrap/Button';
 
 import hycelImg from '../images/hycel.jpg';
 
+import firebase from 'firebase/app';
+import "firebase/auth";
+
 import '../styles/_LoginForm.scss';
 
 
@@ -44,11 +47,29 @@ class ValidatedLoginform extends Component {
 
     state =
         {
-            login: 'admin',
-            pass: 'admin1234',
+            login: '',
+            pass: '',
         }
 
+    handleLogin = (e) => {
+        this.setState({
+            login: e.target.value
+        })
+    }
+    handlePass = (e) => {
+        this.setState({
+            login: e.target.pass
+        })
+    }
+    handleClick = () => {
+
+        this.setState({
+            login: '',
+            pass: '',
+        })
+    }
     render() {
+
         return (
             <>
                 {paw}
@@ -56,17 +77,18 @@ class ValidatedLoginform extends Component {
                     <div className="login-wrapper">
                         <div className="login-header">
                             {Logo}
-                            <p>Witaj w klubie dobrej zabawy.</p>
+                            <p>Witaj w klubie dobrej zabawy!.</p>
                             {/* <p>Łapiesz kundle i zgarniasz hajs!</p> */}
-                            <p>Zbieraj punkty i rywalizuj ze znajomymi!</p>
+                            {/* <p>Zbieraj punkty i rywalizuj ze znajomymi!</p> */}
+                            <p>Łap psiaki, zbieraj punkty i rywalizuj ze znajomymi</p>
                         </div>
                         <div className="login-form">
                             <form>
                                 <label>LOGIN</label>
-                                <input type="text" placeholder="Wpisz login" value={this.state.login} />
+                                <input type="text" placeholder="Wpisz login" value={this.state.login} onChange={this.handleLogin} />
                                 <label>HASŁO</label>
-                                <input type="password" placeholder="Wpisz hasło" value={this.state.passs} />
-                                <a href="/dashboard"><Button className="log-in" type="submit" size="lg">ZALOGUJ</Button></a>
+                                <input type="password" placeholder="Wpisz hasło" value={this.state.passs} onChange={this.handlePass} />
+                                <a href="/dashboard"><Button onClick={this.handleClick} className="log-in" type="submit" size="lg">ZALOGUJ</Button></a>
                             </form>
                             <a className="forgot-pass" href="#">Zapomniałem hasła</a>
                             <span className="new-acc">Nie posiadasz konta? <a href="#">ZAŁÓŻ KONTO</a>!</span>

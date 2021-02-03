@@ -41,7 +41,7 @@ const ProfileCard = (props) => {
                     </li>
                     <li>
                         <a href="">
-                            <span className="title">Zł. psy</span>
+                            <span className="title">Psy</span>
                             <b className="stats">{doneTasks.length === 0 ? basicScore : doneTasks.length + basicScore}</b>
                         </a>
                     </li>

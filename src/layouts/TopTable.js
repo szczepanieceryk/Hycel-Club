@@ -29,10 +29,11 @@ const TopTable = (props) => {
         const { username } = user;
         const userName = username;
 
-        // console.log(userName);
+        // return userName;
+        console.log(userName);
     });
     return (
-        <div className="topTable">
+        <div className="topTable" style={{ backgroundColor: '#f7f7fa' }}>
             <h6 className="title"><strong>Top z tyg.</strong></h6>
             <Table striped bordered hover size="sm">
                 <thead>

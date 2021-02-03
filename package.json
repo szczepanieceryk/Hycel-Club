@@ -9,6 +9,7 @@
     "bootstrap": "^4.5.3",
     "bootstrap-icons": "^1.3.0",
     "date-fns": "^2.16.1",
+    "firebase": "^8.2.5",
     "firebase-tools": "^9.1.0",
     "formik": "^2.2.6",
     "npm-user-validate": "^1.0.1",

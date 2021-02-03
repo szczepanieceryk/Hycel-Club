@@ -65,7 +65,7 @@ class Dashboard extends Component {
                 <div className="dashboard-wrapper">
                     <ProfileBar />
                     <div className="task">
-                        <h6>DODAJ ZLECENIE</h6>
+                        <h6><strong>DODAJ ZLECENIE</strong></h6>
                     </div>
                     <br />
                     <AddTask add={this.addTask} />

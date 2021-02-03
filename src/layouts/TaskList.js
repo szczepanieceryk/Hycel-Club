@@ -30,7 +30,7 @@ const TaskList = (props) => {
 
     return (
         <div className="taskList">
-            <h6>MOJE ZLECENIA</h6>
+            <h6><strong>MOJE ZLECENIA</strong></h6>
             <Tabs className="tabs" defaultActiveKey="home" transition={false} id="noanim-tab-example">
                 <Tab eventKey="home" title="Aktywne">
                     <div className="active">

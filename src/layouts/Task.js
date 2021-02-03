@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Button from 'react-bootstrap/Button';
+
 
 import '../styles/_Task.scss';
 
@@ -31,6 +32,7 @@ const Task = (props) => {
     } else {
 
         const finish = new Date(finishDate).toLocaleDateString();
+
         return (
             <>
                 <div className="task">

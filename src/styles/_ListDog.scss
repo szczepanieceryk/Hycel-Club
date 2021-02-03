@@ -13,6 +13,14 @@
     }
 }
 
+@media(min-width:640px) {
+    .list-dog {
+        .dogo {
+            height: 6vh;
+        }
+    }
+}
+
 @media(min-width:1024px) {
     .list-dog {
         .dogo {

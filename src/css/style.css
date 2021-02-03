@@ -11,6 +11,11 @@
 
 * div {
   border-radius: 8px;
+  margin: 0 2px;
+}
+
+* .container {
+  padding: 0px;
 }
 
 @media (min-width: 1280px) {
@@ -39,6 +44,10 @@
 
 .pawLogin {
   margin: 20px 0 10px;
+}
+
+.wrapper {
+  height: 100vh;
 }
 
 .wrapper .login-wrapper .login-header {
@@ -80,7 +89,7 @@
 
 .wrapper .login-wrapper .login-form .new-acc {
   display: block;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -181,10 +190,12 @@
 
 .dashboard-wrapper {
   background-color: #f7f7fa;
+  background-color: #ddd;
 }
 
 .dashboard-wrapper .task {
   padding: 20px 0 20px;
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -200,6 +211,9 @@
     row-gap: 20px;
     -webkit-column-gap: 25px;
             column-gap: 25px;
+  }
+  .dashboard-wrapper .task {
+    margin-top: 0px;
   }
   .dashboard-wrapper .profileBar {
     -ms-grid-row: 1;
@@ -246,9 +260,19 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas: "top top top top" "header header header profile" " main main main sidebar" ". tasks . score";
   }
+  .dashboard-wrapper .profile-card,
+  .dashboard-wrapper .topTable,
+  .dashboard-wrapper .activity-wrapper {
+    margin-right: 15px;
+  }
+  .dashboard-wrapper .task,
+  .dashboard-wrapper .addTask {
+    margin-left: 15px;
+  }
 }
 
 .profileBar {
+  background-color: #f7f7fa;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,6 +311,7 @@
   min-height: 300px;
   margin-bottom: 15px;
   background-color: #ddd;
+  background-color: #f7f7fa;
 }
 
 .addTask .title {
@@ -341,11 +366,24 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .addTask .form .add {
+    margin: 0 100px 30px auto;
+  }
+}
+
+@media (min-width: 1900px) {
+  .addTask .form .add {
+    margin: 0 180px 30px auto;
+  }
+}
+
 .taskList {
   min-height: 230px;
   margin-bottom: 15px;
   text-align: center;
   background-color: #ddd;
+  background-color: #f7f7fa;
 }
 
 .taskList .tabs {
@@ -384,6 +422,7 @@
 
 .task {
   background-color: #ddd;
+  background-color: #f7f7fa;
 }
 
 .task h6 {
@@ -405,8 +444,10 @@
 }
 
 .activity-wrapper {
-  background-color: #ddd;
   margin-bottom: 15px;
+  background-color: #ddd;
+  background-color: #f7f7fa;
+  text-align: center;
 }
 
 .activity-wrapper p {
@@ -418,6 +459,10 @@
   padding: 20px;
   margin: 0;
   text-align: center;
+}
+
+.activity-wrapper svg {
+  margin-left: 5px;
 }
 
 .activity-wrapper .progress {
@@ -433,27 +478,50 @@
   padding: 15px 0 10px;
 }
 
-@media (min-width: 1280px) {
+.activity-wrapper .sucess h6 {
+  padding: 0 5px 0;
+}
+
+@media (min-width: 1024px) {
   .activity-wrapper {
     margin: 0;
   }
 }
 
 @media (min-width: 1400px) {
+  .activity-wrapper {
+    text-align: left;
+  }
   .activity-wrapper .activity span {
     padding-right: 20px;
+  }
+  .activity-wrapper .sucess h6 {
+    padding: 0 10px;
   }
 }
 
 @media (min-width: 1600px) {
   .activity-wrapper .activity span {
-    padding-right: 190px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .activity-wrapper p {
+    padding-left: 35px;
+  }
+  .activity-wrapper .activity p {
+    padding-left: 35px;
+  }
+  .activity-wrapper .activity span {
+    padding-right: 40px;
   }
 }
 
 .profile-card {
   display: none;
   background-color: #ddd;
+  background-color: #f7f7fa;
 }
 
 .profile-card svg {
@@ -522,6 +590,59 @@
   }
 }
 
+.list-wrapper {
+  margin-bottom: 15px;
+  background-color: #ddd;
+  background-color: #f7f7fa;
+}
+
+.list-wrapper .title {
+  padding: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.list-wrapper .info {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.list-wrapper .task {
+  padding: 20px 0 0;
+}
+
+@media (min-width: 1024px) {
+  .list-wrapper {
+    margin: 0;
+    min-height: 250px;
+    min-width: 250px;
+  }
+  .list-wrapper h6 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .list-wrapper {
+    margin: 0;
+    min-height: 250px;
+    min-width: 250px;
+  }
+  .list-wrapper .list span {
+    padding: 0 2px 0;
+  }
+  .list-wrapper h6 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1600px) {
+  .list-wrapper .list span {
+    padding: 0 5px 0;
+  }
+}
+
 .list-dog p {
   text-align: center;
 }
@@ -533,6 +654,12 @@
 .list-dog .dogo {
   margin-top: 15px;
   height: 10vh;
+}
+
+@media (min-width: 640px) {
+  .list-dog .dogo {
+    height: 6vh;
+  }
 }
 
 @media (min-width: 1024px) {
