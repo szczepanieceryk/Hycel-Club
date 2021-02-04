@@ -64,14 +64,13 @@ class Dashboard extends Component {
                 <Toast />
                 <div className="dashboard-wrapper">
                     <ProfileBar />
+                    <ActivityCard tasks={this.state.tasks} />
                     <div className="task">
                         <h6><strong>DODAJ ZLECENIE</strong></h6>
                     </div>
-                    <br />
                     <AddTask add={this.addTask} />
                     <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
                     <CatchedList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
-                    <ActivityCard tasks={this.state.tasks} />
                     <TopTable tasks={this.state.tasks} />
                     <ProfileCard tasks={this.state.tasks} userName={this.userName} />
                 </div>

@@ -157,9 +157,17 @@
             .login-form {
                 form {
                     label {
-
                         margin-left: 0;
                     }
+
+                }
+
+                .forgot-pass {
+                    margin-top: 10px;
+                }
+
+                .new-acc {
+                    margin-top: 30px;
                 }
             }
         }
@@ -184,8 +192,69 @@
         .main-image {
             .logo {
                 height: 60vh;
-                margin: 0px 0 20px 70px;
+                margin: 0px 0 0px 70px;
 
+            }
+        }
+    }
+}
+
+@media(min-width:1400px) {
+    .wrapper {
+
+        .login-wrapper {
+            .login-header {
+                margin: 0 20px;
+
+                p {
+                    text-align: left;
+                }
+            }
+
+            .login-form {
+                text-align: center;
+
+                form {
+                    label {
+                        margin-left: 40px;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media(min-width:1400px) {
+    .wrapper {
+        .login-wrapper {
+            .login-header {
+                p {
+                    text-align: center;
+                }
+
+            }
+
+            .login-form {
+                form {
+                    label {
+                        margin-left: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:1900px) {
+    .wrapper {
+        .login-wrapper {
+            .login-form {
+                form {
+                    label {
+                        margin-left: 170px;
+                    }
+                }
             }
         }
     }

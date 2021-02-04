@@ -29,8 +29,8 @@ const TopTable = (props) => {
         const { username } = user;
         const userName = username;
 
-        // return userName;
-        console.log(userName);
+        return userName;
+        // console.log(userName);
     });
     return (
         <div className="topTable" style={{ backgroundColor: '#f7f7fa' }}>

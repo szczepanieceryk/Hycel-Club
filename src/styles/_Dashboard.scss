@@ -4,34 +4,38 @@
 
     .task {
         padding: 20px 0 20px;
-        margin-top: 15px;
+        margin: 15px 0 15px 0;
         text-align: center;
-
     }
 }
 
-// @media(min-width:640px) {
-//     .dashboard-wrapper {}
-// }
+@media(min-width:640px) {
+    .dashboard-wrapper {
+        .topTable {
+            width: 450px;
+            margin: 0 auto;
+        }
+    }
+}
 
 @media(min-width:1024px) {
     .dashboard-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "top top top"
+            " sidebar sidebar sidebar"
+            "header header header"
+            " main main main "
+            " tasks tasks list "
+            " score score score "
+        ;
+        row-gap: 20px;
+        column-gap: 25px;
 
         .task {
             margin-top: 0px;
         }
-
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 5;
-        grid-template-areas: "top top top top"
-        " sidebar sidebar sidebar"
-        " main main main "
-        " tasks tasks . "
-        "score score score"
-        ;
-        row-gap: 20px;
-        column-gap: 25px;
 
         .profileBar {
             grid-area: top;
@@ -43,7 +47,7 @@
 
         .task {
             grid-area: header;
-            padding-top: 40px
+            margin: 0;
         }
 
         .addTask {
@@ -56,32 +60,71 @@
 
         .topTable {
             grid-area: score;
+            margin: 0 auto;
+            width: 550px;
+        }
+
+        .list-wrapper {
+            grid-area: list;
         }
 
         .profile-card {
             grid-area: profile;
+            display: none;
+        }
+
+        .list-wrapper,
+        .addTask,
+        .task,
+        .activity-wrapper,
+        .profile-card {
+            margin-right: 15px;
+        }
+
+        .task,
+        .taskList,
+        .addTask,
+        .activity-wrapper {
+            margin-left: 15px;
         }
     }
+
 }
 
 @media(min-width:1280px) {
     .dashboard-wrapper {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas: "top top top top"
+        grid-template-areas:
+            "top top top top"
             "header header header profile"
             " main main main sidebar"
-            ". tasks . score"
+            ". tasks list score"
         ;
 
-        .profile-card,
-        .topTable,
-        .activity-wrapper {
-            margin-right: 15px;
+        .profile-card {
+            display: block;
+            grid-area: profile;
         }
 
-        .task,
-        .addTask {
-            margin-left: 15px;
+        .topTable {
+            grid-area: score;
+            width: auto;
+            margin: 0 15px 0 0;
+        }
+
+        .activity-wrapper {
+            margin-left: 0;
+        }
+
+        .list-wrapper,
+        .addTask,
+        .task {
+            margin-right: 0px;
+        }
+
+        .task {
+            margin-bottom: 0;
+            padding-top: 70px
         }
     }
 }
