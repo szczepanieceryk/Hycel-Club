@@ -16,6 +16,7 @@ const CatchedList = (props) => {
             </div>
         </div>
     );
+
 }
 
 export default CatchedList;

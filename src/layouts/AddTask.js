@@ -56,6 +56,7 @@ class AddTask extends Component {
         maxDate = maxDate + '-12-31';
         return (
             <div className="addTask">
+                <h6><strong>DODAJ ZLECENIE</strong></h6>
                 <div className="form">
                     <input type="text" placeholder="dodaj psa" value={this.state.dog} onChange={this.handleText} />
                     <input type="text" placeholder="dodaj miejsce" value={this.state.area} onChange={this.handleInput} />

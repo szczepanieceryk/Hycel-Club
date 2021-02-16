@@ -65,7 +65,7 @@ class Dashboard extends Component {
                 <div className="dashboard-wrapper">
                     <ProfileBar />
                     <ActivityCard tasks={this.state.tasks} />
-                    <div className="task">
+                    <div className="task-title">
                         <h6><strong>DODAJ ZLECENIE</strong></h6>
                     </div>
                     <AddTask add={this.addTask} />
@@ -74,8 +74,6 @@ class Dashboard extends Component {
                     <TopTable tasks={this.state.tasks} />
                     <ProfileCard tasks={this.state.tasks} userName={this.userName} />
                 </div>
-
-
             </>
         );
     }

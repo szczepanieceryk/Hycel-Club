@@ -1,9 +1,8 @@
 import React from 'react';
 
 import Button from 'react-bootstrap/Button';
-import styled from 'styled-components';
 
-import Skeleton from './Skeleton';
+import Skeleton from 'react-loading-skeleton';
 
 import '../styles/_ProfileBar.scss';
 
@@ -28,21 +27,17 @@ const profileIcon = <svg className="profile" xmlns="http://www.w3.org/2000/svg" 
     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
 </svg>
 
-const logo = styled.div`
-width:40px;
-height:40px;
-`
 
 const ProbileBar = () => {
 
     return (
         <div className="profileBar">
             <div className="logo">
-                <Skeleton /> {paw}
+                {paw || <Skeleton circle={true} height={50} width={50} />}
             </div>
             <div className="user">
-                {profileIcon}
-                <Button className="log-out" variant="outline-dark">Wyloguj</Button>
+                {profileIcon || <Skeleton circle={true} height={50} width={50} />}
+                <Button className="log-out" id="logout" variant="outline-dark">Wyloguj</Button>
             </div>
         </div>
     );

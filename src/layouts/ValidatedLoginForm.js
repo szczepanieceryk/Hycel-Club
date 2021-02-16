@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 
 import Button from 'react-bootstrap/Button';
 
-import hycelImg from '../images/hycel.jpg';
-
 import firebase from 'firebase/app';
 import "firebase/auth";
+
+import Skeleton from 'react-loading-skeleton';
+
+import hycelImg from '../images/hycel.jpg';
 
 import '../styles/_LoginForm.scss';
 
@@ -28,6 +30,7 @@ const paw = <svg className="pawLogin" width="40" height="40" viewBox="0 0 60 60"
 
 const Logo =
     <svg width="195" height="49" viewBox="0 0 195 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+
         <path d="M73.792 33V26.256H69.976V33H65.032V16.296H69.976V22.464H73.792V16.296H78.736V33H73.792ZM95.0134 16.296L89.6854 26.832V33H84.7414V26.856L79.4134 16.296H84.8134L87.2854 23.112L89.7814 16.296H95.0134ZM102.143 15.816C104.207 15.816 105.999 16.472 107.519 17.784L105.239 20.472C104.759 20.12 104.287 19.848 103.823 19.656C103.375 19.464 102.895 19.368 102.383 19.368C101.407 19.368 100.647 19.808 100.103 20.688C99.5753 21.568 99.3113 22.872 99.3113 24.6C99.3113 26.328 99.5833 27.624 100.127 28.488C100.671 29.336 101.447 29.76 102.455 29.76C102.999 29.76 103.503 29.648 103.967 29.424C104.447 29.2 104.975 28.864 105.551 28.416L107.711 31.152C107.039 31.824 106.223 32.384 105.263 32.832C104.319 33.264 103.303 33.48 102.215 33.48C100.567 33.48 99.1433 33.144 97.9433 32.472C96.7433 31.784 95.8153 30.776 95.1593 29.448C94.5033 28.12 94.1753 26.504 94.1753 24.6C94.1753 22.776 94.5113 21.208 95.1833 19.896C95.8553 18.568 96.7913 17.56 97.9913 16.872C99.1913 16.168 100.575 15.816 102.143 15.816ZM119.711 16.296L119.207 19.728H113.687V22.848H118.535V26.184H113.687V29.544H119.591V33H108.743V16.296H119.711ZM126.156 16.296V29.208H132.468L131.964 33H121.212V16.296H126.156ZM146.44 15.816C148.504 15.816 150.296 16.472 151.816 17.784L149.536 20.472C149.056 20.12 148.584 19.848 148.12 19.656C147.672 19.464 147.192 19.368 146.68 19.368C145.704 19.368 144.944 19.808 144.4 20.688C143.872 21.568 143.608 22.872 143.608 24.6C143.608 26.328 143.88 27.624 144.424 28.488C144.968 29.336 145.744 29.76 146.752 29.76C147.296 29.76 147.8 29.648 148.264 29.424C148.744 29.2 149.272 28.864 149.848 28.416L152.008 31.152C151.336 31.824 150.52 32.384 149.56 32.832C148.616 33.264 147.6 33.48 146.512 33.48C144.864 33.48 143.44 33.144 142.24 32.472C141.04 31.784 140.112 30.776 139.456 29.448C138.8 28.12 138.472 26.504 138.472 24.6C138.472 22.776 138.808 21.208 139.48 19.896C140.152 18.568 141.088 17.56 142.288 16.872C143.488 16.168 144.872 15.816 146.44 15.816ZM157.984 16.296V29.208H164.296L163.792 33H153.04V16.296H157.984ZM178.602 27.336C178.602 28.504 178.346 29.552 177.834 30.48C177.322 31.408 176.546 32.144 175.506 32.688C174.466 33.216 173.186 33.48 171.666 33.48C169.378 33.48 167.65 32.928 166.482 31.824C165.314 30.72 164.729 29.224 164.729 27.336V16.296H169.674V27.192C169.674 28.136 169.826 28.832 170.13 29.28C170.45 29.712 170.962 29.928 171.666 29.928C172.37 29.928 172.874 29.712 173.178 29.28C173.498 28.832 173.658 28.136 173.658 27.192V16.296H178.602V27.336ZM190.231 24.144C191.335 24.368 192.231 24.784 192.919 25.392C193.607 25.984 193.951 26.872 193.951 28.056C193.951 29.896 193.279 31.184 191.935 31.92C190.607 32.64 188.719 33 186.271 33H180.415V16.296H185.623C188.103 16.296 189.991 16.632 191.287 17.304C192.599 17.96 193.255 19.064 193.255 20.616C193.255 21.608 192.967 22.392 192.391 22.968C191.815 23.528 191.095 23.92 190.231 24.144ZM185.359 19.68V22.752H186.199C186.951 22.752 187.479 22.632 187.783 22.392C188.087 22.136 188.239 21.712 188.239 21.12C188.239 20.624 188.071 20.264 187.735 20.04C187.415 19.8 186.863 19.68 186.079 19.68H185.359ZM186.319 29.52C187.151 29.52 187.783 29.392 188.215 29.136C188.647 28.88 188.863 28.408 188.863 27.72C188.863 27.08 188.663 26.616 188.263 26.328C187.879 26.024 187.295 25.872 186.511 25.872H185.359V29.52H186.319Z" fill="black" />
         <g clip-path="url(#clip0)">
             <path d="M30.1123 27.4676C29.5117 24.4237 27.4301 21.9274 24.5437 20.7904C21.6573 19.6534 18.4325 20.0595 15.9176 21.8762L9.85697 26.2536C8.85148 26.9797 8.12192 27.9891 7.74736 29.1715C7.37271 30.3542 7.38848 31.5992 7.79251 32.7726C8.19737 33.9453 8.95274 34.9355 9.97687 35.6361C11.001 36.3367 12.198 36.6813 13.4381 36.6331L13.5212 36.6295C16.6324 36.5314 19.6676 37.7392 21.861 39.9509C22.4268 40.5213 23.0919 40.9591 23.8236 41.2473C24.2213 41.404 24.6393 41.5164 25.0713 41.5823C26.298 41.7686 27.5258 41.5596 28.6221 40.9779C29.7177 40.3962 30.5787 39.4962 31.1117 38.3756C31.6447 37.2549 31.7994 36.0194 31.5594 34.8021L30.1123 27.4676Z" fill="black" />
@@ -43,55 +46,51 @@ const Logo =
         </defs>
     </svg>
 
+const slogant1 = 'Witaj w klubie dobrej zabawy!.'
+const slogan2 = 'Łap psiaki, zbieraj punkty i rywalizuj ze znajomymi.'
+
 class ValidatedLoginform extends Component {
 
-    state =
-        {
-            login: '',
-            pass: '',
-        }
-
-    handleLogin = (e) => {
-        this.setState({
-            login: e.target.value
-        })
-    }
-    handlePass = (e) => {
-        this.setState({
-            login: e.target.pass
-        })
-    }
-    handleClick = () => {
-
-        this.setState({
-            login: '',
-            pass: '',
-        })
-    }
     render() {
 
         return (
             <>
-                {paw}
+                {paw || <Skeleton circle={true} height={50} width={50} />}
                 <div className="wrapper">
                     <div className="login-wrapper">
                         <div className="login-header">
-                            {Logo}
-                            <p>Witaj w klubie dobrej zabawy!.</p>
+                            {Logo || <Skeleton height={40} />}
+                            <p>{slogant1 || <Skeleton count={2} />}</p>
                             {/* <p>Łapiesz kundle i zgarniasz hajs!</p> */}
                             {/* <p>Zbieraj punkty i rywalizuj ze znajomymi!</p> */}
-                            <p>Łap psiaki, zbieraj punkty i rywalizuj ze znajomymi</p>
+                            <p>{slogan2 || <Skeleton count={3} height={40} />}</p>
                         </div>
                         <div className="login-form">
-                            <form>
-                                <label>LOGIN</label>
-                                <input type="text" placeholder="Wpisz login" value={this.state.login} onChange={this.handleLogin} />
+                            <form id="login-form">
+                                <label>EMAIL</label>
+                                <input type="text" placeholder="Wpisz e-mail" id="login-email" required />
                                 <label>HASŁO</label>
-                                <input type="password" placeholder="Wpisz hasło" value={this.state.passs} onChange={this.handlePass} />
-                                <a href="/dashboard"><Button onClick={this.handleClick} className="log-in" type="submit" size="lg">ZALOGUJ</Button></a>
+                                <input type="password" placeholder="Wpisz hasło" id="login-password" required />
+                                <a href="/dashboard"><Button className="log-in" type="submit" size="lg">ZALOGUJ</Button></a>
                             </form>
                             <a className="forgot-pass" href="#">Zapomniałem hasła</a>
-                            <span className="new-acc">Nie posiadasz konta? <a href="#">ZAŁÓŻ KONTO</a>!</span>
+                            <span className="new-acc">Nie posiadasz konta?<a href="#" data-target="modal-signup">ZAŁÓŻ KONTO</a>!</span>
+                        </div>
+                        <div id="modal-signup" class="modal">
+                            <div class="modal-content">
+                                <h4>Zarejestruj się</h4><br />
+                                <form id="signup-form">
+                                    <div class="input-field">
+                                        <input type="email" id="signup-email" required />
+                                        <label for="signup-email">e-mail</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input type="password" id="signup-password" required />
+                                        <label for="signup-password">Nowe hasło</label>
+                                    </div>
+                                    <button class="btn yellow darken-2 z-depth-0">Zarejestruj się</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <div className="main-image">

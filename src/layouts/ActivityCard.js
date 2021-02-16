@@ -16,6 +16,7 @@ const ActivityCard = (props) => {
     const done = props.tasks.filter(task => !task.active);
     const doneTasks = done.map(task => <Task key={task.id} task={task} delete={props.delete} change={props.change} />)
 
+
     const now = 0;
     const pkt = 10;
     const progress = 25;
@@ -40,7 +41,7 @@ const ActivityCard = (props) => {
                 <ProgressBar className="bar" animated now={doneTasks.length > 0 ? doneTasks.length * progress : now} label={`${doneTasks.length > 0 ? doneTasks.length * progress : now}%`} />
             </div>
             <div className="sucess">
-                {doneTasks.length === finished && <h6>Brawo! wykonałeś 100% dziennej aktywności :D</h6>}
+                {doneTasks.length === finished && <h6>Brawo! osiągnąłeś swój cel dnia 😁</h6>}
                 {doneTasks.length > finished ? <h6> Świetnie! wykonałeś {doneTasks.length * progress}% przeciętnej dziennej aktywności 💪</h6> : null}
             </div>
 

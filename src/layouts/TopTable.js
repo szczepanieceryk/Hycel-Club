@@ -4,11 +4,18 @@ import Task from './Task';
 
 import Table from 'react-bootstrap/Table'
 
+import Skeleton from 'react-loading-skeleton';
+
+import '../styles/_TopTable.scss';
+
 const apiURL = 'https://jsonplaceholder.typicode.com/users/';
 
 const TopTable = (props) => {
 
     const basicScore = 100;
+
+    const user1 = 'RoseRick';
+    const user2 = 'MattJ';
 
     const done = props.tasks.filter(task => !task.active);
     const doneTasks = done.map(task => <Task key={task.id} task={task} delete={props.delete} change={props.change} />)
@@ -30,10 +37,9 @@ const TopTable = (props) => {
         const userName = username;
 
         return userName;
-        // console.log(userName);
     });
     return (
-        <div className="topTable" style={{ backgroundColor: '#f7f7fa' }}>
+        <div className="topTable">
             <h6 className="title"><strong>Top z tyg.</strong></h6>
             <Table striped bordered hover size="sm">
                 <thead>
@@ -46,12 +52,12 @@ const TopTable = (props) => {
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>RoseRick</td>
+                        <td>{user1}</td>
                         <td>{doneTasks.length === 0 ? basicScore : doneTasks.length * 10 + basicScore}</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>MattJ</td>
+                        <td>{user2}</td>
                         <td>{doneTasks.length === 0 ? 70 : doneTasks.length * 10 + 70}</td>
                     </tr>
                     <tr>

@@ -3,13 +3,21 @@
     margin-bottom: 15px;
     background-color: #ddd;
     background-color: #f7f7fa;
+    background-color: #fff;
+
+    h6 {
+        padding: 20px 0;
+        margin: 0;
+        text-align: center;
+        background-color: #fff;
+    }
 
     .title {
         text-align: center;
     }
 
     .form {
-        padding: 20px 0px;
+        padding: 10px 0px 20px;
 
         input {
             display: block;
@@ -27,14 +35,7 @@
             display: block;
             text-align: center;
             margin: 5px 0 5px;
-
-
         }
-
-        // #important {
-        //     display: inline;
-        //     margin: 0 5px 0 10px;
-        // }
 
         .add {
             display: block;
@@ -44,6 +45,12 @@
             background-color: #F47457;
             border-color: #fff;
         }
+    }
+}
+
+@media(min-width:640px) {
+    .addTask {
+        box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
     }
 }
 
