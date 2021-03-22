@@ -1,8 +1,5 @@
 .activity-wrapper {
     margin: 15px 0 15px;
-    background-color: #ddd;
-    background-color: #f7f7fa;
-    background-color: #fff;
     text-align: center;
 
     p {
@@ -35,12 +32,6 @@
         h6 {
             padding: 0 5px 0;
         }
-    }
-}
-
-@media(min-width:640px) {
-    .activity-wrapper {
-        box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
     }
 }
 

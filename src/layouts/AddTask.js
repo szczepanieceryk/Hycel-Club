@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Button from 'react-bootstrap/Button';
-import Notification from './Notification';
+
 import '../styles/_AddTask.scss';
 
 class AddTask extends Component {

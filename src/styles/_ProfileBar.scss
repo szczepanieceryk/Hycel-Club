@@ -2,9 +2,6 @@
     margin: 0;
     display: flex;
     justify-content: space-between;
-    border-radius: 0;
-    // background-color: #f7f7fa;
-    background-color: #fff;
 
     svg {
         margin: 20px 0 10px;
@@ -23,6 +20,25 @@
             transition: .7s;
             display: none;
         }
+
+        #settings {
+            margin-right: 0;
+        }
+
+        #basic-nav-dropdown {
+            margin-right: 10px;
+            padding: 0;
+            color: black;
+
+        }
+
+        .logOut {
+            margin-top: 10px;
+            font-weight: bold;
+            color: rgb(238, 44, 0);
+            background-color: white;
+        }
+
     }
 }
 
@@ -31,6 +47,10 @@
         .user {
             .log-out {
                 display: inline;
+            }
+
+            #basic-nav-dropdown {
+                display: none;
             }
         }
     }

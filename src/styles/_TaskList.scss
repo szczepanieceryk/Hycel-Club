@@ -2,11 +2,9 @@
     min-height: 230px;
     margin-bottom: 15px;
     text-align: center;
-    background-color: #fff;
 
     .tabs {
         justify-content: space-evenly;
-
     }
 
     h6 {
@@ -25,12 +23,6 @@
         .title {
             padding-top: 20px;
         }
-    }
-}
-
-@media(min-width:640px) {
-    .taskList {
-        box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
     }
 }
 

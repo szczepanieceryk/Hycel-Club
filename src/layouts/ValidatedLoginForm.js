@@ -2,17 +2,14 @@ import React, { Component } from 'react';
 
 import Button from 'react-bootstrap/Button';
 
-import firebase from 'firebase/app';
-import "firebase/auth";
-
-import Skeleton from 'react-loading-skeleton';
+import { Link } from 'react-router-dom';
 
 import hycelImg from '../images/hycel.jpg';
 
 import '../styles/_LoginForm.scss';
 
 
-const paw = <svg className="pawLogin" width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+const paw = <svg id='paw' className="pawLogin" width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="30" cy="30" r="30" fill="#F47457" />
     <g clip-path="url(#clip0)">
         <path d="M36 33.7034C35.3411 30.3635 33.0571 27.6244 29.8899 26.3768C26.7227 25.1293 23.1843 25.5748 20.4248 27.5682L13.7747 32.3713C12.6715 33.1681 11.8709 34.2756 11.46 35.573C11.0489 36.8708 11.0662 38.2369 11.5095 39.5243C11.9537 40.8112 12.7826 41.8976 13.9063 42.6664C15.03 43.4351 16.3435 43.8132 17.7041 43.7603L17.7954 43.7564C21.2091 43.6488 24.5395 44.9741 26.9462 47.4008C27.5671 48.0267 28.2969 48.5071 29.0997 48.8233C29.5362 48.9952 29.9948 49.1186 30.4688 49.1909C31.8149 49.3953 33.162 49.166 34.3649 48.5277C35.5671 47.8894 36.5119 46.9019 37.0967 45.6723C37.6815 44.4426 37.8512 43.087 37.588 41.7512L36 33.7034Z" fill="white" />
@@ -47,59 +44,49 @@ const Logo =
     </svg>
 
 const slogant1 = 'Witaj w klubie dobrej zabawy!.'
-const slogan2 = 'Łap psiaki, zbieraj punkty i rywalizuj ze znajomymi.'
+const slogan2 = 'Łap psiaki, zbieraj punkty, rywalizuj ze znajomymi!.'
 
 class ValidatedLoginform extends Component {
 
-    render() {
+    state = {
+        defaultEmail: 'admin@test.com',
+        defaultPass: 'admin1234'
+    }
 
+    render() {
         return (
             <>
-                {paw || <Skeleton circle={true} height={50} width={50} />}
+                {paw}
+
                 <div className="wrapper">
                     <div className="login-wrapper">
                         <div className="login-header">
-                            {Logo || <Skeleton height={40} />}
-                            <p>{slogant1 || <Skeleton count={2} />}</p>
+                            {Logo}
+                            <p>{slogant1}</p>
                             {/* <p>Łapiesz kundle i zgarniasz hajs!</p> */}
                             {/* <p>Zbieraj punkty i rywalizuj ze znajomymi!</p> */}
-                            <p>{slogan2 || <Skeleton count={3} height={40} />}</p>
+                            <p>{slogan2}</p>
                         </div>
                         <div className="login-form">
                             <form id="login-form">
                                 <label>EMAIL</label>
-                                <input type="text" placeholder="Wpisz e-mail" id="login-email" required />
+                                <input type="text" placeholder="Wpisz e-mail" id="email" value={this.state.defaultEmail} required />
                                 <label>HASŁO</label>
-                                <input type="password" placeholder="Wpisz hasło" id="login-password" required />
-                                <a href="/dashboard"><Button className="log-in" type="submit" size="lg">ZALOGUJ</Button></a>
+                                <input type="password" placeholder="Wpisz hasło" id="password" value={this.state.defaultPass} required />
+                                <Link to='/dashboard'><Button className="log-in" type="submit" size="lg">ZALOGUJ</Button></Link>
                             </form>
-                            <a className="forgot-pass" href="#">Zapomniałem hasła</a>
-                            <span className="new-acc">Nie posiadasz konta?<a href="#" data-target="modal-signup">ZAŁÓŻ KONTO</a>!</span>
-                        </div>
-                        <div id="modal-signup" class="modal">
-                            <div class="modal-content">
-                                <h4>Zarejestruj się</h4><br />
-                                <form id="signup-form">
-                                    <div class="input-field">
-                                        <input type="email" id="signup-email" required />
-                                        <label for="signup-email">e-mail</label>
-                                    </div>
-                                    <div class="input-field">
-                                        <input type="password" id="signup-password" required />
-                                        <label for="signup-password">Nowe hasło</label>
-                                    </div>
-                                    <button class="btn yellow darken-2 z-depth-0">Zarejestruj się</button>
-                                </form>
-                            </div>
+                            <Link className="forgot-pass" to="/">Zapomniałem hasła</Link>
+                            <span className="new-acc">Nie posiadasz konta?<Link to="/" data-target="modal-signup"> ZAŁÓŻ KONTO</Link>!</span>
                         </div>
                     </div>
                     <div className="main-image">
                         <img className="logo" src={hycelImg} alt="HycelClub logo" />
-                        <a className="license" href="http://www.freepik.com">Designed by pch.vector / Freepik</a>
+                        <Link className="license" to="http://www.freepik.com">Designed by pch.vector / Freepik</Link>
                     </div>
                 </div>
             </>
         );
     }
 }
+
 export default ValidatedLoginform;

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * h6 {
@@ -11,7 +11,6 @@
 
 * div {
   border-radius: 8px;
-  margin: 0 2px;
   background-color: #fff;
 }
 
@@ -107,19 +106,24 @@
   .wrapper .login-wrapper .login-header {
     padding-top: 30px;
   }
+
   .wrapper .login-wrapper .login-form {
     padding: 40px 0px 0px;
   }
+
   .wrapper .login-wrapper .login-form label {
     margin-bottom: 10px;
   }
+
   .wrapper .login-wrapper .login-form input {
     padding: 10px 150px 10px 5px;
   }
+
   .wrapper .login-wrapper .login-form .log-in {
     padding: 15px 120px;
     margin: 25px 0 10px;
   }
+
   .wrapper .login-wrapper .login-form .new-acc {
     margin-top: 40px;
   }
@@ -130,10 +134,12 @@
     margin-top: 100px;
     text-align: center;
   }
+
   .wrapper .login-wrapper .login-form form label {
     text-align: left;
     margin-left: 185px;
   }
+
   .wrapper .login-wrapper .login-form form input {
     margin: 0 auto 10px;
   }
@@ -146,10 +152,11 @@
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr, 1fr;
-        grid-template-columns: 1fr, 1fr;
-        grid-template-areas: "login image ";
+    grid-template-columns: 1fr, 1fr;
+    grid-template-areas: "login image ";
     padding: 50px 0 130px;
   }
+
   .wrapper .main-image .logo {
     display: block;
     height: 30vh;
@@ -158,24 +165,30 @@
     -ms-grid-column: 2;
     grid-area: image;
   }
+
   .wrapper .main-image .license {
     display: block;
     text-align: center;
   }
+
   .wrapper .login-wrapper {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: login;
   }
+
   .wrapper .login-wrapper .login-header {
     text-align: center;
   }
+
   .wrapper .login-wrapper .login-form form label {
     margin-left: 0;
   }
+
   .wrapper .login-wrapper .login-form .forgot-pass {
     margin-top: 10px;
   }
+
   .wrapper .login-wrapper .login-form .new-acc {
     margin-top: 30px;
   }
@@ -186,9 +199,11 @@
     margin-top: 60px;
     display: block;
   }
+
   .wrapper .login-wrapper .login-header {
     margin-right: 20px;
   }
+
   .wrapper .main-image .logo {
     height: 60vh;
     margin: 0px 0 0px 70px;
@@ -199,12 +214,15 @@
   .wrapper .login-wrapper .login-header {
     margin: 0 20px;
   }
+
   .wrapper .login-wrapper .login-header p {
     text-align: left;
   }
+
   .wrapper .login-wrapper .login-form {
     text-align: center;
   }
+
   .wrapper .login-wrapper .login-form form label {
     margin-left: 40px;
   }
@@ -214,6 +232,7 @@
   .wrapper .login-wrapper .login-header p {
     text-align: center;
   }
+
   .wrapper .login-wrapper .login-form form label {
     margin-left: 90px;
   }
@@ -259,8 +278,9 @@
 @media (min-width: 640px) {
   .dashboard-wrapper .task-title {
     -webkit-box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
-            box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
+    box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
   }
+
   .dashboard-wrapper .topTable {
     width: 450px;
     margin: 0 auto;
@@ -272,45 +292,52 @@
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: auto;
-        grid-template-rows: auto;
-        grid-template-areas: "top top top" " sidebar sidebar sidebar" " main main main " " tasks tasks list " " score score score ";
+    grid-template-rows: auto;
+    grid-template-areas: "top top top"" sidebar sidebar sidebar"" main main main "" tasks tasks list "" score score score ";
     row-gap: 20px;
     -webkit-column-gap: 25px;
-            column-gap: 25px;
+    column-gap: 25px;
   }
+
   .dashboard-wrapper .task-title {
     margin-top: 0px;
   }
+
   .dashboard-wrapper .profileBar {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: top;
   }
+
   .dashboard-wrapper .activity-wrapper {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: sidebar;
   }
+
   .dashboard-wrapper .task-title {
     grid-area: header;
     margin: 0;
   }
+
   .dashboard-wrapper .addTask {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: main;
   }
+
   .dashboard-wrapper .taskList {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: tasks;
   }
+
   .dashboard-wrapper .topTable {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
@@ -319,15 +346,18 @@
     margin: 0 auto;
     width: 550px;
   }
+
   .dashboard-wrapper .list-wrapper {
     -ms-grid-row: 4;
     -ms-grid-column: 3;
     grid-area: list;
   }
+
   .dashboard-wrapper .profile-card {
     grid-area: profile;
     display: none;
   }
+
   .dashboard-wrapper .task-title {
     margin: 0 15px;
   }
@@ -336,15 +366,17 @@
 @media (min-width: 1280px) {
   .dashboard-wrapper {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas: "top top top top" "main main main profile" " main main main sidebar" "task tasks list score";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "top top top top""main main main profile"" main main main sidebar""task tasks list score";
   }
+
   .dashboard-wrapper .profile-card {
     display: block;
     -ms-grid-row: 2;
     -ms-grid-column: 4;
     grid-area: profile;
   }
+
   .dashboard-wrapper .topTable {
     -ms-grid-row: 4;
     -ms-grid-column: 4;
@@ -352,22 +384,27 @@
     width: auto;
     margin: 0 15px 0 0;
   }
+
   .dashboard-wrapper .activity-wrapper {
     margin-left: 0;
   }
+
   .dashboard-wrapper .list-wrapper,
   .dashboard-wrapper .addTask,
   .dashboard-wrapper .task-title {
     margin-right: 0px;
   }
+
   .dashboard-wrapper .profile-card,
   .dashboard-wrapper .activity-wrapper,
   .dashboard-wrapper .topTable {
     margin-right: 15px;
   }
+
   .dashboard-wrapper .addTask {
     margin-left: 15px;
   }
+
   .dashboard-wrapper .task-title {
     margin-bottom: 0;
     padding-top: 70px;
@@ -380,14 +417,14 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   border-radius: 0;
   background-color: #fff;
 }
 
 .profileBar svg {
-  margin: 20px 0 10px;
+  margin: 20px 0 10px 5px;
 }
 
 .profileBar .user svg {
@@ -468,7 +505,7 @@
 @media (min-width: 640px) {
   .addTask {
     -webkit-box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
-            box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
+    box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
   }
 }
 
@@ -476,9 +513,11 @@
   .addTask {
     margin: 0;
   }
+
   .addTask .form #date {
     margin: 10px 0 10px;
   }
+
   .addTask .form .add {
     margin: 0 50px 30px auto;
   }
@@ -511,8 +550,8 @@
 
 .taskList .tabs {
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
 }
 
 .taskList h6 {
@@ -534,7 +573,7 @@
 @media (min-width: 640px) {
   .taskList {
     -webkit-box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
-            box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
+    box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
   }
 }
 
@@ -616,7 +655,7 @@
 @media (min-width: 640px) {
   .activity-wrapper {
     -webkit-box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
-            box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
+    box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
   }
 }
 
@@ -630,9 +669,11 @@
   .activity-wrapper {
     text-align: left;
   }
+
   .activity-wrapper .activity span {
     padding-right: 20px;
   }
+
   .activity-wrapper .sucess h6 {
     padding: 0 10px;
   }
@@ -648,9 +689,11 @@
   .activity-wrapper p {
     padding-left: 35px;
   }
+
   .activity-wrapper .activity p {
     padding-left: 35px;
   }
+
   .activity-wrapper .activity span {
     padding-right: 40px;
   }
@@ -681,8 +724,8 @@
   padding: 0 10px 20px;
   list-style: none;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .profile-card .profile-body ul li::after {
@@ -715,7 +758,7 @@
 @media (min-width: 640px) {
   .profile-card {
     -webkit-box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
-            box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
+    box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
   }
 }
 
@@ -729,15 +772,15 @@
 @media (min-width: 1280px) {
   .profile-card .profile-body ul {
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 }
 
 @media (min-width: 1400px) {
   .profile-card .profile-body ul {
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
   }
 }
 
@@ -765,7 +808,7 @@
 @media (min-width: 640px) {
   .list-wrapper {
     -webkit-box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
-            box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
+    box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
   }
 }
 
@@ -775,6 +818,7 @@
     min-height: 250px;
     min-width: 250px;
   }
+
   .list-wrapper h6 {
     margin: 0;
   }
@@ -786,9 +830,11 @@
     min-height: 250px;
     min-width: 250px;
   }
+
   .list-wrapper .list span {
     padding: 0 2px 0;
   }
+
   .list-wrapper h6 {
     margin: 0;
   }
@@ -836,7 +882,8 @@
 @media (min-width: 640px) {
   .topTable {
     -webkit-box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
-            box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
+    box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
   }
 }
+
 /*# sourceMappingURL=style.css.map */

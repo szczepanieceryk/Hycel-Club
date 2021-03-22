@@ -2,8 +2,6 @@ import React from 'react';
 
 import Task from './Task';
 
-import Skeleton from 'react-loading-skeleton';
-
 import '../styles/_ProfileCard.scss';
 
 const ProfileCard = (props) => {
@@ -25,26 +23,26 @@ const ProfileCard = (props) => {
 
     return (
         <div className="profile-card">
-            {profileIcon || <Skeleton circle={true} height={50} width={50} />}
-            <h5 className="userName"><strong>{userName || <Skeleton />}</strong></h5>
+            {profileIcon}
+            <h5 className="userName"><strong>{userName}</strong></h5>
             <div className="profile-body">
                 <ul>
                     <li>
-                        <a href="">
+                        <a href='#'>
                             <span className="title">Obserwujący</span>
-                            <b className="stats">{followers || <Skeleton height={25} width={25} />}</b>
+                            <b className="stats">{followers}</b>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href='#'>
                             <span className="title">Obserwowani</span>
-                            <b className="stats">{following || <Skeleton height={25} width={25} />}</b>
+                            <b className="stats">{following}</b>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href='#'>
                             <span className="title">Psy</span>
-                            <b className="stats">{doneTasks.length === 0 ? basicScore : doneTasks.length + basicScore || <Skeleton height={25} width={25} />}</b>
+                            <b className="stats">{doneTasks.length === 0 ? basicScore : doneTasks.length + basicScore}</b>
                         </a>
                     </li>
                 </ul>

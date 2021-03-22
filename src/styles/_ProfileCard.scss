@@ -1,6 +1,5 @@
 .profile-card {
     display: none;
-    background-color: #fff;
 
     svg {
         display: block;
@@ -25,12 +24,12 @@
             li::after {
                 content: '';
                 display: block;
-                border-right: 1px solid #f0f0f5;
                 height: 24px;
                 width: 1px;
                 right: 0;
                 top: 50%;
                 margin-top: -22px;
+                border-right: 1px solid #f0f0f5;
             }
 
             a {
@@ -52,12 +51,6 @@
     }
 }
 
-@media(min-width:640px) {
-    .profile-card {
-        box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
-    }
-}
-
 @media(min-width:1024px) {
     .profile-card {
         min-width: 220px;
@@ -67,10 +60,10 @@
 
 @media(min-width:1280px) {
     .profile-card {
+
         .profile-body {
             ul {
                 justify-content: space-around;
-                // justify-content: center;
             }
         }
     }

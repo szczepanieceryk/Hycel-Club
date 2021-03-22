@@ -1,8 +1,15 @@
-.pawLogin {
-    margin: 20px 0 10px;
+// .pawLogin {
+//     margin: 20px 0 10px 10px;
+
+// }
+
+#paw {
+    margin: 20px 0 10px 10px;
 }
 
 .wrapper {
+    margin: 0 15px;
+
     height: 100vh;
 
     .login-wrapper {
@@ -10,14 +17,16 @@
         .login-header {
             padding-top: 10px;
 
+
             p {
                 margin: 0;
+                text-align: center;
             }
         }
 
         .login-form {
-
             padding: 20px 0px 0px;
+            margin: 0 auto;
 
             label {
                 display: block;
@@ -67,6 +76,7 @@
 
 @media(min-width:360px) {
     .wrapper {
+
         .login-wrapper {
 
             .login-header {
@@ -106,10 +116,12 @@
         .login-wrapper {
             .login-form {
 
+
                 form {
                     label {
                         text-align: left;
                         margin-left: 185px;
+
                     }
 
                     input {
@@ -174,6 +186,7 @@
     }
 }
 
+
 @media(min-width:1280px) {
     .paw {
         margin-top: 60px;
@@ -203,6 +216,7 @@
     .wrapper {
 
         .login-wrapper {
+
             .login-header {
                 margin: 0 20px;
 
@@ -216,7 +230,8 @@
 
                 form {
                     label {
-                        margin-left: 40px;
+                        margin-left: 0px;
+
                     }
                 }
 
@@ -225,8 +240,11 @@
     }
 }
 
-@media(min-width:1400px) {
+
+
+@media(min-width:1600px) {
     .wrapper {
+
         .login-wrapper {
             .login-header {
                 p {
@@ -238,7 +256,7 @@
             .login-form {
                 form {
                     label {
-                        margin-left: 90px;
+                        margin-left: 50px;
                     }
                 }
             }

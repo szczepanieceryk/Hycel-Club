@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
 import AddTask from '../layouts/AddTask';
+import ActivityCard from '../layouts/ActivityCard';
 import CatchedList from '../layouts/CatchedList';
 import ProfileBar from '../layouts/ProfileBar';
 import ProfileCard from '../layouts/ProfileCard';
-import ActivityCard from '../layouts/ActivityCard';
 import TaskList from '../layouts/TaskList';
 import TopTable from '../layouts/TopTable';
-import Toast from '../layouts/Notification';
 
 import '../styles/_Dashboard.scss';
 
@@ -18,9 +17,10 @@ class Dashboard extends Component {
 
     counter = 0;
     state = {
-        tasks: [
-        ]
+        tasks: [],
+        randomUsers: ['CrazyLoco', 'adam1234', 'RoseRick', 'MatJ', 'Destroyer999', 'HycelMajster']
     }
+
     deleteTask = (id) => {
         const tasks = [...this.state.tasks];
         const index = tasks.findIndex(task => task.id === id);
@@ -58,10 +58,13 @@ class Dashboard extends Component {
         }))
         return true
     }
+
+
+
+
     render() {
         return (
             <>
-                <Toast />
                 <div className="dashboard-wrapper">
                     <ProfileBar />
                     <ActivityCard tasks={this.state.tasks} />
@@ -71,7 +74,7 @@ class Dashboard extends Component {
                     <AddTask add={this.addTask} />
                     <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
                     <CatchedList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
-                    <TopTable tasks={this.state.tasks} />
+                    <TopTable tasks={this.state.tasks} randomUsers={this.state.randomUsers} />
                     <ProfileCard tasks={this.state.tasks} userName={this.userName} />
                 </div>
             </>
@@ -79,3 +82,4 @@ class Dashboard extends Component {
     }
 }
 export default Dashboard;
+

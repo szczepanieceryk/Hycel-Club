@@ -31,8 +31,15 @@
 
 @media(min-width:640px) {
     .dashboard-wrapper {
-        .task-title {
-            box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
+
+        .activity-wrapper,
+        .addTask,
+        .list-wrapper,
+        .profile-card,
+        .task-title,
+        .taskList,
+        .topTable {
+            box-shadow: 4px 4px 0px -1px rgba(0, 0, 0, 0.32);
         }
 
         .topTable {
@@ -116,13 +123,13 @@
         .profile-card {
             display: block;
             grid-area: profile;
-            // margin-left: 15px;
         }
 
         .topTable {
             grid-area: score;
             width: auto;
             margin: 0 15px 0 0;
+
         }
 
         .activity-wrapper {
@@ -148,7 +155,6 @@
         .task-title {
             margin-bottom: 0;
             padding-top: 70px;
-            // display: block;
         }
     }
 }

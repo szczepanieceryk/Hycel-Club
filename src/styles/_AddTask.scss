@@ -1,15 +1,11 @@
 .addTask {
     min-height: 300px;
     margin-bottom: 15px;
-    background-color: #ddd;
-    background-color: #f7f7fa;
-    background-color: #fff;
 
     h6 {
         padding: 20px 0;
         margin: 0;
         text-align: center;
-        background-color: #fff;
     }
 
     .title {
@@ -31,7 +27,6 @@
         }
 
         #date {
-
             display: block;
             text-align: center;
             margin: 5px 0 5px;
@@ -48,16 +43,9 @@
     }
 }
 
-@media(min-width:640px) {
-    .addTask {
-        box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
-    }
-}
-
 @media(min-width:1024px) {
     .addTask {
         margin: 0;
-
 
         .form {
             #date {
@@ -75,8 +63,6 @@
     .addTask {
         .form {
             padding: 50px 0 10px;
-            // margin: 20px 0 0 325px;
-            // margin-top: 50px;
         }
     }
 }

@@ -1,10 +1,7 @@
 .list-wrapper {
     margin-bottom: 15px;
-    background-color: #fff;
 
     .title {
-        padding: 20px;
-        margin-bottom: 5px;
         text-align: center;
     }
 
@@ -17,11 +14,21 @@
     .task {
         padding: 20px 0 0;
     }
+
+    .default {
+        display: none;
+        text-align: center;
+        margin: 0;
+    }
 }
 
 @media(min-width:640px) {
     .list-wrapper {
-        box-shadow: 5px 5px 0px -1px rgba(0, 0, 0, 0.32);
+
+        .default {
+            display: block;
+            padding-bottom: 10px;
+        }
     }
 }
 

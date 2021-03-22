@@ -3,12 +3,14 @@
         text-align: center;
     }
 
-    svg {
+    #delete {
         cursor: pointer;
+        margin-top: 10px;
     }
 
     .dogo {
         margin-top: 15px;
+        margin-right: 15px;
         height: 10vh;
     }
 }
