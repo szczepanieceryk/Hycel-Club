@@ -28,10 +28,10 @@ const ActivityCard = (props) => {
                 <strong>Dzienna efektywność</strong>
             </h6>
             <p><strong>Cel dnia:</strong></p>
-            <span>{doneTasks.length < finished ? doneTasks.length : finished}/4 psy</span>
+            <span>{doneTasks.length < finished ? doneTasks.length : finished}/4 zwierzęta</span>
             {doneTasks.length >= finished && check}
             <div className="activity">
-                <p><strong>Złapane psy:</strong></p>
+                <p><strong>Złapane zwierzęta:</strong></p>
                 <span>{doneTasks.length > 0 ? doneTasks.length : 0}
                 </span>
                 <p><strong>Zebrane pkt:</strong></p>

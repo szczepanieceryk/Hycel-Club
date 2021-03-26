@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 
 import Page from './Page';
 
-import '../css/style.css';
+import '../styles/style.scss';
 
 function App() {
   return (

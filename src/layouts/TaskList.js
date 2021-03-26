@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Task from '../layouts/Task';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
-import Tabs from 'react-bootstrap/Tabs'
-import Tab from 'react-bootstrap/Tab'
+import Task from '../layouts/Task';
 
 import '../styles/_TaskList.scss';
 
@@ -11,18 +11,6 @@ const TaskList = (props) => {
 
     const active = props.tasks.filter(task => task.active);
     const done = props.tasks.filter(task => !task.active);
-
-
-    // if (active.length >= 2) {
-    //     active.sort((a, b) => {
-    //         a = a.text.toLowerCase();
-
-
-    //         if (a < b) return -1;
-    //         if (a > b) return 1;
-    //         return 0
-    //     })
-    // }
 
     const activeTasks = active.map(task => <Task key={task.id} task={task} delete={props.delete} change={props.change} />)
     const doneTasks = done.map(task => <Task key={task.id} task={task} delete={props.delete} change={props.change} />)
@@ -33,8 +21,7 @@ const TaskList = (props) => {
             <Tabs className="tabs" defaultActiveKey="home" transition={false} id="noanim-tab-example">
                 <Tab eventKey="home" title="Aktywne">
                     <div className="active">
-                        <h6 className="title">ZLECENIA DO WYKONANIA</h6>
-                        {activeTasks.length > 0 ? activeTasks : <p>Dodaj zlecenie</p>}
+                        {activeTasks.length > 0 ? activeTasks : <p className='text'>Tutaj znajdziesz Twoje aktywne i zakończone zlecenia</p>}
                     </div>
                 </Tab>
                 <Tab eventKey="profile" title="Zakończone">

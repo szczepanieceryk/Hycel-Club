@@ -1,4 +1,4 @@
-.list-dog {
+.list-animal {
     p {
         text-align: center;
     }
@@ -8,7 +8,7 @@
         margin-top: 10px;
     }
 
-    .dogo {
+    .animal {
         margin-top: 15px;
         margin-right: 15px;
         height: 10vh;
@@ -16,16 +16,16 @@
 }
 
 @media(min-width:640px) {
-    .list-dog {
-        .dogo {
+    .list-animal {
+        .animal {
             height: 6vh;
         }
     }
 }
 
 @media(min-width:1024px) {
-    .list-dog {
-        .dogo {
+    .list-animal {
+        .animal {
             height: 8vh;
         }
     }

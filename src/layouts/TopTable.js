@@ -1,36 +1,12 @@
 import React from 'react';
 
-import Table from 'react-bootstrap/Table'
+import Table from 'react-bootstrap/Table';
 
 import Task from './Task';
-
-const apiURL = 'https://jsonplaceholder.typicode.com/users/';
-
 
 
 const TopTable = (props) => {
 
-    const getUser = async (id) => {
-        try {
-            const response = await fetch(`${apiURL}${id}`);
-            const data = await response.json();
-
-            return data;
-
-        } catch (err) {
-            console.log(err)
-        }
-    };
-
-    getUser(3).then((data) => {
-        const user = data;
-        const { username } = user;
-
-        const userAPI = username;
-
-        console.log(userAPI)
-
-    })
 
     const basicScore = 100;
 

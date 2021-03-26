@@ -15,30 +15,98 @@
     .form {
         padding: 10px 0px 20px;
 
+        label {
+            display: block;
+            margin: 5px 10px 5px 40px;
+        }
+
+        select,
         input {
             display: block;
-            padding: 5px 10px;
-            margin: 0 auto;
+            margin: 0 auto 20px;
+            padding: 10px 20px 10px 5px;
+            width: 230px;
+            border-radius: 8px;
+            border: 1px solid rgb(179, 179, 179);
+        }
+
+        .input-date {
+            margin: 0 auto 0px;
         }
 
         .important {
-            display: block;
+            margin: 0;
             text-align: center;
+            display: inline;
+        }
+
+        #important {
+            display: inline;
+            width: 20px;
+            margin: 0 5px 0 35px;
         }
 
         #date {
             display: block;
-            text-align: center;
-            margin: 5px 0 5px;
         }
 
         .add {
             display: block;
-            padding: 15px 80px;
-            margin: 15px auto;
+            padding: 15px 50px;
+            margin: 25px auto 15px;
             border-radius: 8px;
             background-color: #F47457;
             border-color: #fff;
+        }
+    }
+}
+
+@media(min-width:360px) {
+    .addTask {
+
+        .form {
+            label {
+                margin: 5px 10px 10px 60px;
+            }
+
+            #date {
+                margin: 10px 10px 10px 60px;
+            }
+
+            #important {
+                margin: 0 5px 0 70px
+            }
+        }
+    }
+}
+
+@media(min-width:640px) {
+    .addTask {
+
+        .form {
+            label {
+                text-align: center;
+                display: block;
+                margin: 5px auto 10px;
+            }
+
+            select {
+                display: block;
+                text-align: center;
+                // margin: 0 auto;
+            }
+
+            input {
+                margin-top: 10px;
+            }
+
+            #date {
+                margin: 5px auto 10px;
+            }
+
+            #important {
+                margin: 0 5px 0 250px;
+            }
         }
     }
 }
@@ -52,8 +120,8 @@
                 margin: 10px 0 10px;
             }
 
-            .add {
-                margin: 0 50px 30px auto;
+            #important {
+                margin: 0 5px 0 380px;
             }
         }
     }
@@ -62,7 +130,40 @@
 @media(min-width:1280px) {
     .addTask {
         .form {
-            padding: 50px 0 10px;
+            padding: 20px 0 10px;
+
+            #important {
+                margin: 0 5px 0 320px;
+            }
+
+            select,
+            input {
+                margin: 0 auto 15px;
+            }
+
+            label {
+                width: 230px;
+                text-align: left;
+            }
+
+            .add {
+                margin: 30px auto 15px;
+            }
+
+            #date {
+                margin: 10px auto;
+            }
+        }
+    }
+}
+
+@media(min-width:1400px) {
+    .addTask {
+        .form {
+
+            #important {
+                margin: 0 5px 0 400px;
+            }
         }
     }
 }
@@ -70,8 +171,9 @@
 @media(min-width:1600px) {
     .addTask {
         .form {
-            .add {
-                margin: 0 100px 30px auto;
+
+            #important {
+                margin: 0 5px 0 500px;
             }
         }
     }
@@ -80,8 +182,9 @@
 @media(min-width:1900px) {
     .addTask {
         .form {
-            .add {
-                margin: 0 180px 30px auto;
+
+            #important {
+                margin: 0 5px 0 600px;
             }
         }
     }

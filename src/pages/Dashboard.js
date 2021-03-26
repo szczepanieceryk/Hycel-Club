@@ -42,10 +42,11 @@ class Dashboard extends Component {
             tasks
         })
     }
-    addTask = (dog, area, important, date) => {
+    addTask = (animal, breed, area, important, date) => {
         const task = {
             id: this.counter,
-            dog,
+            animal,
+            breed,
             area,
             important,
             date,

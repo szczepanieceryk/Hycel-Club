@@ -12,7 +12,11 @@ const ProfileCard = (props) => {
     const userName = props.userName;
     const following = 30;
     const followers = 45;
-    const basicScore = 10;
+    let basicScore = 10;
+
+    const followingSpan = 'Obserwo.';
+    const followersSpan = 'Obserwu.';
+    const animalsSpan = 'Zwierz.';
 
     const profileIcon = <svg className="profile" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
@@ -29,19 +33,19 @@ const ProfileCard = (props) => {
                 <ul>
                     <li>
                         <a href='#'>
-                            <span className="title">Obserwujący</span>
+                            <span className="title">{followersSpan}</span>
                             <b className="stats">{followers}</b>
                         </a>
                     </li>
                     <li>
                         <a href='#'>
-                            <span className="title">Obserwowani</span>
+                            <span className="title">{followingSpan}</span>
                             <b className="stats">{following}</b>
                         </a>
                     </li>
                     <li>
                         <a href='#'>
-                            <span className="title">Psy</span>
+                            <span className="title">{animalsSpan}</span>
                             <b className="stats">{doneTasks.length === 0 ? basicScore : doneTasks.length + basicScore}</b>
                         </a>
                     </li>

@@ -3,6 +3,10 @@
     margin-bottom: 15px;
     text-align: center;
 
+    .animal-table {
+        display: none;
+    }
+
     .tabs {
         justify-content: space-evenly;
     }
@@ -11,17 +15,15 @@
         padding-top: 20px;
     }
 
+    .text {
+        margin-top: 20px;
+    }
+
     .task {
         padding: 20px 0 0;
 
         P {
             margin: 0 5px 10px;
-        }
-    }
-
-    .active {
-        .title {
-            padding-top: 20px;
         }
     }
 }
@@ -34,7 +36,19 @@
 
 @media(min-width:1280px) {
     .taskList {
-        min-width: 450px;
+        width: 550px;
+        margin: 0 auto;
+
+        .animal-table {
+            display: block;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media(min-width:1400px) {
+    .taskList {
+        width: 700px;
         margin: 0 auto;
     }
 }
