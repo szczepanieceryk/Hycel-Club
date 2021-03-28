@@ -18,7 +18,7 @@ class Dashboard extends Component {
     counter = 0;
     state = {
         tasks: [],
-        randomUsers: ['CrazyLoco', 'adam1234', 'RoseRick', 'MatJ', 'Destroyer999', 'HycelMajster']
+        randomUsers: ['CrazyLoco', 'adam1234', 'RoseRick', 'MatJ', 'Destroyer999', 'HycelMajster'],
     }
 
     deleteTask = (id) => {
@@ -59,10 +59,6 @@ class Dashboard extends Component {
         }))
         return true
     }
-
-
-
-
     render() {
         return (
             <>

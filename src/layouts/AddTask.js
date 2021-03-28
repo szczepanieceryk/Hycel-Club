@@ -50,8 +50,14 @@ class AddTask extends Component {
                 area: '',
                 checked: false,
                 date: this.minDate,
+                show: !this.state.show,
+                setShow: !this.state.setShow
             })
         }
+    }
+    showNotification = () => {
+
+
     }
     render() {
         let maxDate = this.minDate.slice(0, 4) * 1 + 1;

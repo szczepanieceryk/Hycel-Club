@@ -44,7 +44,7 @@ const Logo =
     </svg>
 
 const slogant1 = 'Witaj w klubie dobrej zabawy!.'
-const slogan2 = 'Łap psiaki, zbieraj punkty, rywalizuj ze znajomymi!.'
+const slogan2 = 'Łap zwierzaki i rywalizuj ze znajomymi!'
 
 class ValidatedLoginform extends Component {
 
@@ -63,8 +63,6 @@ class ValidatedLoginform extends Component {
                         <div className="login-header">
                             {Logo}
                             <p>{slogant1}</p>
-                            {/* <p>Łapiesz kundle i zgarniasz hajs!</p> */}
-                            {/* <p>Zbieraj punkty i rywalizuj ze znajomymi!</p> */}
                             <p>{slogan2}</p>
                         </div>
                         <div className="login-form">

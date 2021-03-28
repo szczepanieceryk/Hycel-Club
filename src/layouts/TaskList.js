@@ -27,8 +27,8 @@ const TaskList = (props) => {
                 <Tab eventKey="profile" title="Zakończone">
                     <div className="done">
                         <h6>WYKONANE ZLECENIA: <em>{doneTasks.length}</em></h6>
-                        {doneTasks > 5 && <span style={{ fontSize: '10px' }}>wyświetlonych jest jedynie 5 ostatnich zleceń</span>}
-                        {doneTasks.slice(0, 5)}
+                        {doneTasks.length > 4 && <span>(wyświetlane są jedynie 4 ostatnio zakończone zlecenia)</span>}
+                        {doneTasks.slice(0, 4)}
                     </div>
                 </Tab>
             </Tabs>
